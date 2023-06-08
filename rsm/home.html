@@ -23,25 +23,14 @@
                     </svg>
                 </button>
                 <img src="img/logo-header.png" alt="" class="header__logo">
-                <form action="" class="header__nav-area grid">
-                    <label for="search" class="header__search input bg--light-grey">
-                        <button class="flex hover" type="submit">
-                            <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M8.5 2C4.91015 2 2 4.91015 2 8.5C2 12.0899 4.91015 15 8.5 15C12.0899 15 15 12.0899 15 8.5C15 4.91015 12.0899 2 8.5 2ZM0 8.5C0 3.80558 3.80558 0 8.5 0C13.1944 0 17 3.80558 17 8.5C17 13.1944 13.1944 17 8.5 17C3.80558 17 0 13.1944 0 8.5Z"/>
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M13.0927 13.0927C13.4832 12.7022 14.1164 12.7022 14.5069 13.0927L19.7069 18.2927C20.0974 18.6832 20.0974 19.3164 19.7069 19.7069C19.3164 20.0974 18.6832 20.0974 18.2927 19.7069L13.0927 14.5069C12.7022 14.1164 12.7022 13.4832 13.0927 13.0927Z"/>
-                            </svg>
-                        </button>
-                        <input class="semi-bold color--black" name="search" id="search" type="search" placeholder="Поиск">
-                    </label>
-                    <nav class="header__nav flex">
-                        <a href="#" class="header__nav-elem semi-bold color--black hover">Цены</a>
-                        <a href="#" class="header__nav-elem semi-bold color--black hover">О компании</a>
-                        <a href="#" class="header__nav-elem semi-bold color--black hover">Поломки</a>
-                        <a href="#" class="header__nav-elem semi-bold color--black hover">Отзывы</a>
-                        <a href="#" class="header__nav-elem semi-bold color--black hover">Гарантия</a>
-                        <a href="#" class="header__nav-elem semi-bold color--black hover">Бренды</a>
-                    </nav>
-                </form>
+                <nav class="header__nav flex">
+                    <a href="#" class="header__nav-elem semi-bold color--black hover">Цены</a>
+                    <a href="#" class="header__nav-elem semi-bold color--black hover">О компании</a>
+                    <a href="#" class="header__nav-elem semi-bold color--black hover">Поломки</a>
+                    <a href="#" class="header__nav-elem semi-bold color--black hover">Отзывы</a>
+                    <a href="#" class="header__nav-elem semi-bold color--black hover">Гарантия</a>
+                    <a href="#" class="header__nav-elem semi-bold color--black hover">Бренды</a>
+                </nav>
             </div>
             <div class="header__right-area grid">
                 <div class="header__number-area flex">
@@ -70,7 +59,16 @@
         </div>
     </header>
     <header class="header bg--white shadow">
-        <div class="header__wrapper flex">
+        <div class="header__wrapper grid">
+            <label for="search" class="header__search input bg--light-grey">
+                <button class="flex hover" type="submit">
+                    <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.5 2C4.91015 2 2 4.91015 2 8.5C2 12.0899 4.91015 15 8.5 15C12.0899 15 15 12.0899 15 8.5C15 4.91015 12.0899 2 8.5 2ZM0 8.5C0 3.80558 3.80558 0 8.5 0C13.1944 0 17 3.80558 17 8.5C17 13.1944 13.1944 17 8.5 17C3.80558 17 0 13.1944 0 8.5Z"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M13.0927 13.0927C13.4832 12.7022 14.1164 12.7022 14.5069 13.0927L19.7069 18.2927C20.0974 18.6832 20.0974 19.3164 19.7069 19.7069C19.3164 20.0974 18.6832 20.0974 18.2927 19.7069L13.0927 14.5069C12.7022 14.1164 12.7022 13.4832 13.0927 13.0927Z"/>
+                    </svg>
+                </button>
+                <input class="semi-bold color--black" name="search" id="search" type="search" placeholder="Поиск">
+            </label>
             <nav class="header__sub-menu flex">
                 <a href="#" class="header__sub-menu-elem flex hover">
                     <svg class="hover" viewBox="0 0 18 26" xmlns="http://www.w3.org/2000/svg">
