@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+    <title>ServiceRSM</title>
+</head>
+<body>
+    <header class="header bg--white">
+        <div class="header__wrapper flex">
+            <div class="header__left-area flex">
+                <button class="header__action bg--light-grey hover" easy-toggle="#mobile-nav" easy-class="open" easy-rcoe>
+                    <svg viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 1.5C0 0.671573 0.671573 0 1.5 0H13.5C14.3284 0 15 0.671573 15 1.5C15 2.32843 14.3284 3 13.5 3H1.5C0.671573 3 0 2.32843 0 1.5Z"/>
+                        <path d="M0 7.5C0 6.67157 0.671573 6 1.5 6H13.5C14.3284 6 15 6.67157 15 7.5C15 8.32843 14.3284 9 13.5 9H1.5C0.671573 9 0 8.32843 0 7.5Z"/>
+                        <path d="M0 13.5C0 12.6716 0.671573 12 1.5 12H13.5C14.3284 12 15 12.6716 15 13.5C15 14.3284 14.3284 15 13.5 15H1.5C0.671573 15 0 14.3284 0 13.5Z"/>
+                    </svg>
+                </button>
+                <img src="img/logo-header.png" alt="" class="header__logo">
+                <nav class="header__nav flex">
+                    <a href="#" class="header__nav-elem semi-bold color--black hover">Цены</a>
+                    <a href="#" class="header__nav-elem semi-bold color--black hover">О компании</a>
+                    <a href="#" class="header__nav-elem semi-bold color--black hover">Поломки</a>
+                    <a href="#" class="header__nav-elem semi-bold color--black hover">Отзывы</a>
+                    <a href="#" class="header__nav-elem semi-bold color--black hover">Гарантия</a>
+                    <a href="#" class="header__nav-elem semi-bold color--black hover">Бренды</a>
+                </nav>
+            </div>
+            <div class="header__right-area grid">
+                <div class="header__number-area flex">
+                    <button class="header__number-right-area flex">
+                        <span class="header__number semi-bold color--black hover">+7 (999) 333-15-74</span>
+                    </button>
+                </div>
+                <button class="header__order-call button semi-bold color--main bg--main-transparent hover" easy-add="#modal" easy-class="show">Заказать звонок</button>
+                <div id="modal" class="modal bg--white grid">
+                    <form action="" class="form grid">
+                        <div class="form__top grid">
+                            <h3 class="form__title color--black">Заказать звонок</h3>
+                            <p class="form__descr color--light-black medium">
+                                Быстрая форма обратной связи для консультации со специалистом сервисного центра.
+                            </p>
+                        </div>
+                        <div class="form__bottom grid">
+                            <input type="text" name="name" class="form__input input bg--light-grey color--black semi-bold" placeholder="Ваше имя" required>
+                            <input type="tel" name="telephone" class="form__input input bg--light-grey color--black semi-bold" placeholder="Ваш номер телефона" required>
+                            <button type="submit" class="form__save button bg--main color--white semi-bold hover">Заказать звонок</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-bg" easy-remove="#modal" easy-class="show"></div>
+            </div>
+        </div>
+    </header>
+    <header class="header bg--light-grey shadow">
+        <div class="header__wrapper flex">
+            <nav class="header__sub-menu flex">
+                <a href="#" class="header__sub-menu-elem flex hover">
+                    <svg class="hover" viewBox="0 0 18 26" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16 0H2C1.46957 0 0.960859 0.210714 0.585786 0.585786C0.210714 0.960859 0 1.46957 0 2V24C0 24.5304 0.210714 25.0391 0.585786 25.4142C0.960859 25.7893 1.46957 26 2 26H16C16.5304 26 17.0391 25.7893 17.4142 25.4142C17.7893 25.0391 18 24.5304 18 24V2C18 1.46957 17.7893 0.960859 17.4142 0.585786C17.0391 0.210714 16.5304 0 16 0ZM16 2V10H2V2H16ZM2 24V12H16V24H2Z"/>
+                        <path d="M14 8C14.2652 8 14.5196 7.89464 14.7071 7.70711C14.8946 7.51957 15 7.26522 15 7V5C15 4.73478 14.8946 4.48043 14.7071 4.29289C14.5196 4.10536 14.2652 4 14 4C13.7348 4 13.4804 4.10536 13.2929 4.29289C13.1054 4.48043 13 4.73478 13 5V7C13 7.26522 13.1054 7.51957 13.2929 7.70711C13.4804 7.89464 13.7348 8 14 8ZM14 14C13.7348 14 13.4804 14.1054 13.2929 14.2929C13.1054 14.4804 13 14.7348 13 15V17C13 17.2652 13.1054 17.5196 13.2929 17.7071C13.4804 17.8946 13.7348 18 14 18C14.2652 18 14.5196 17.8946 14.7071 17.7071C14.8946 17.5196 15 17.2652 15 17V15C15 14.7348 14.8946 14.4804 14.7071 14.2929C14.5196 14.1054 14.2652 14 14 14Z"/>
+                    </svg>
+                    <span class="semi-bold color--black hover">Ремонт бытовой техники</span>
+                </a>
+                <a href="#" class="header__sub-menu-elem flex hover">
+                    <svg class="hover" viewBox="0 0 80 66" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M74 0H6C2.7 0 0 2.7 0 6V48C0 51.3 2.7 54 6 54H28V58.2C27.9 58.6 27.1 59.7 26.7 60.2C25.6 61.6 24.5 63 25.3 64.6C25.6 65.3 26.4 66 28 66H51C52 66 54.3 66 55.1 64.2C55.9 62.4 54.5 61 53.3 59.7C52.9 59.2 52.2 58.5 52 58.1V54H74C77.3 54 80 51.3 80 48V6C80 2.7 77.3 0 74 0ZM30.3 62C31.2 60.9 32 59.6 32 58.2V54H48V58.2C48 59.6 49 60.9 50 62H30.3ZM76 48C76 49.1 75.1 50 74 50H6C4.9 50 4 49.1 4 48V42H76V48ZM76 38H4V6C4 4.9 4.9 4 6 4H74C75.1 4 76 4.9 76 6V38Z"/>
+                    </svg>
+                    <span class="semi-bold color--black hover">Ремонт ПК</span>
+                </a>
+                <a href="#" class="header__sub-menu-elem flex hover">
+                    <svg class="hover" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M27.219 7.2094L27.1289 7.1396C26.9561 5.8258 26.3265 4.4574 25.3446 3.30289C23.7495 1.42761 21.1506 0 17.6697 0C14.2409 0 11.8226 1.56423 10.3967 3.50251C9.6911 4.4616 9.2279 5.5122 9.0005 6.5097C8.9537 6.7148 8.9163 6.9208 8.8889 7.1258L8.781 7.2094C7.6569 8.0801 6.8323 9.1359 7.0277 10.3468C7.2165 11.5167 8.2736 12.2289 9.2576 12.6644C9.5084 12.7754 9.7784 12.8791 10.0651 12.9756C10.0221 13.3113 10 13.6533 10 14C10 18.4183 13.5817 22 18 22C22.4183 22 26 18.4183 26 14C26 13.6533 25.9779 13.3113 25.9349 12.9756C26.2216 12.8791 26.4916 12.7754 26.7424 12.6644C27.7264 12.2289 28.7835 11.5167 28.9723 10.3468C29.1677 9.1359 28.3431 8.0801 27.219 7.2094ZM10.9447 8.6719C10.8148 8.298 10.781 7.6975 10.9504 6.9542C11.1158 6.229 11.4606 5.4345 12 4.6982V7.5C12 8.0523 12.4477 8.5 13 8.5C13.5523 8.5 14 8.0523 14 7.5V2.91075C14.8229 2.44152 15.818 2.11503 17 2.02506V5.5C17 6.0523 17.4477 6.5 18 6.5C18.5523 6.5 19 6.0523 19 5.5V2.08698C20.1683 2.24422 21.1674 2.60479 22 3.0873V7.5C22 8.0523 22.4477 8.5 23 8.5C23.5523 8.5 24 8.0523 24 7.5V4.8182C25.1046 6.2344 25.3637 7.7622 25.0529 8.679C24.8756 9.202 25.1559 9.7698 25.679 9.9471C26.1055 10.0917 26.5619 9.9319 26.8118 9.5843C27.009 9.8594 27.0015 10.0054 26.9978 10.0282C26.9849 10.1083 26.8316 10.4378 25.9329 10.8356C25.5427 11.0083 25.0792 11.1634 24.5577 11.2999L24.5341 11.3057C23.9689 11.4525 23.34 11.5767 22.6667 11.6777C21.51 11.8512 20.2222 11.9561 18.9003 11.9889C18.6016 11.9963 18.3011 12 18 12C17.4283 12 16.8588 11.9866 16.2992 11.96C15.2566 11.9105 14.2484 11.8153 13.3242 11.6763C12.6543 11.5756 12.0286 11.4518 11.4659 11.3057L11.4424 11.2999C10.9208 11.1634 10.4573 11.0083 10.0671 10.8356C9.1684 10.4378 9.0151 10.1083 9.0022 10.0282C8.9985 10.0054 8.991 9.8594 9.1882 9.5843C9.4398 9.9342 9.9001 10.0933 10.3281 9.9447C10.8498 9.7635 11.1258 9.1936 10.9447 8.6719ZM12.0221 13.4809C12.3543 13.546 12.6978 13.6049 13.0503 13.6576C14.1182 13.8172 15.2685 13.92 16.4383 13.9681C16.9569 13.9894 17.4793 14 18 14C18.5228 14 19.0473 13.9893 19.568 13.9679C20.7323 13.9198 21.8773 13.8175 22.9408 13.6589C23.2964 13.6059 23.6429 13.5466 23.9779 13.4809C23.9925 13.6519 24 13.825 24 14C24 17.3137 21.3137 20 18 20C14.6863 20 12 17.3137 12 14C12 13.825 12.0075 13.6518 12.0221 13.4809ZM23 22.4896C23.6578 22.6045 24.3281 22.7389 25 22.8923C30.4433 24.1349 36 26.6202 36 30.0001V36.0001H0V30.0001C0 26.6202 5.5567 24.1349 11 22.8923C11.672 22.7389 12.3422 22.6045 13 22.4896V27H23V22.4896ZM9 25.4912C9.654 25.2915 10.3247 25.1096 11 24.9466V29H25V24.9466C26.0247 25.1938 27.0386 25.4849 28 25.8152V34H30V26.5967C30.2893 26.7257 30.5693 26.8587 30.8384 26.9956C31.9747 27.5735 32.8176 28.1704 33.3521 28.7401C33.8768 29.2993 34 29.7126 34 30.0001V34.0001H2V30.0001C2 29.7126 2.1232 29.2993 2.64787 28.7401C3.18243 28.1704 4.0253 27.5735 5.1616 26.9956C5.7306 26.7062 6.3483 26.434 7 26.1806V34H9V25.4912Z"/>
+                    </svg>
+                    <span class="semi-bold color--black hover">Муж на час</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+    <nav id="mobile-nav" class="mobile-nav bg--light-grey">
+        <a href="#" class="mobile-nav__elem semi-bold color--black hover">Цены</a>
+        <a href="#" class="mobile-nav__elem semi-bold color--black hover">О компании</a>
+        <a href="#" class="mobile-nav__elem semi-bold color--black hover">Поломки</a>
+        <a href="#" class="mobile-nav__elem semi-bold color--black hover">Отзывы</a>
+        <a href="#" class="mobile-nav__elem semi-bold color--black hover">Гарантия</a>
+        <a href="#" class="mobile-nav__elem semi-bold color--black hover">Бренды</a>
+    </nav>
+    <div class="wrapper grid">
+        <main class="main">
+            <section class="banner bg--main-transparent grid">
+                <div class="banner__wrapper grid">
+                    <div class="banner__left-area grid">
+                        <div class="banner__top grid">
+                            <h1 class="banner__title color--black">Ремонт стиральных машин на дому в Москве</h1>
+                            <p class="banner__descr color--light-black medium">
+                                Ремонтируем стиральные машины любого бренда и любой сложности с гарантией до 3-ёх лет
+                            </p>
+                        </div>
+                        <div class="banner__points grid">
+                            <div class="banner__point button bg--white flex">
+                                <svg viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M11.005 0C4.94265 0 0 4.93565 0 10.997C0 17.0583 4.94365 22 11.005 22C17.0663 22 22 17.0583 22 10.997C22 4.93565 17.0663 0 11.005 0ZM11.005 1.99945C12.187 1.99748 13.3578 2.22887 14.4502 2.68037C15.5427 3.13186 16.5352 3.79457 17.3709 4.63049C18.2067 5.46641 18.8691 6.45909 19.3204 7.5516C19.7716 8.64412 20.0028 9.81497 20.0005 10.997C20.0029 12.1794 19.7719 13.3506 19.3208 14.4435C18.8696 15.5364 18.2073 16.5295 17.3716 17.3659C16.5359 18.2023 15.5434 18.8656 14.4509 19.3177C13.3583 19.7698 12.1874 20.0019 11.005 20.0005C9.82213 20.002 8.6506 19.7701 7.55748 19.3182C6.46435 18.8662 5.4711 18.2031 4.6346 17.3668C3.79809 16.5305 3.13476 15.5374 2.68259 14.4444C2.23041 13.3513 1.99827 12.1799 1.99945 10.997C1.99945 6.01636 6.02436 1.99945 11.005 1.99945ZM10.989 3.98491C10.8569 3.98621 10.7263 4.01369 10.6048 4.06576C10.4834 4.11784 10.3735 4.19348 10.2814 4.28831C10.1894 4.38313 10.1171 4.49527 10.0686 4.61822C10.0202 4.74118 9.99662 4.87251 9.99927 5.00463V10.997C9.99982 11.1286 10.0263 11.2587 10.0773 11.38C10.1282 11.5013 10.2026 11.6113 10.2962 11.7038L14.2951 15.7047C14.3876 15.7999 14.4981 15.8757 14.6202 15.9277C14.7423 15.9798 14.8736 16.0069 15.0063 16.0077C15.139 16.0085 15.2706 15.9828 15.3933 15.9322C15.516 15.8816 15.6274 15.807 15.721 15.7129C15.8146 15.6188 15.8885 15.507 15.9384 15.384C15.9883 15.261 16.0132 15.1293 16.0117 14.9966C16.0102 14.8639 15.9823 14.7328 15.9296 14.611C15.8769 14.4892 15.8004 14.3791 15.7047 14.2871L12.0007 10.5831V5.00463C12.0034 4.87066 11.9791 4.73751 11.9294 4.6131C11.8796 4.4887 11.8053 4.37557 11.7109 4.28044C11.6165 4.18531 11.504 4.11013 11.38 4.05937C11.2559 4.0086 11.123 3.98328 10.989 3.98491Z"/>
+                                </svg>
+                                <span class="banner__point-text color--main semi-bold">Выезд в удобное время с 9.00 до 21.00</span>
+                            </div>
+                            <div class="banner__point button bg--white flex">
+                                <svg viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M11.6802 1.21402e-07C12.4777 -0.00022517 13.2413 0.313122 13.7971 0.86869C14.3482 1.41948 14.6486 2.16186 14.6315 2.92927C14.6358 3.11639 14.6896 3.29936 14.788 3.46044L14.7904 3.46428C14.9515 3.73122 15.2153 3.92495 15.5236 4.00272C15.8318 4.08049 16.1593 4.03592 16.4337 3.87886L16.4428 3.87369C17.8545 3.08774 19.6547 3.56031 20.467 4.93004L21.1439 6.07114C21.1623 6.1022 21.1786 6.13427 21.1928 6.16714C21.9277 7.51877 21.4406 9.20262 20.0725 9.98006L20.0657 9.98395C19.8852 10.0844 19.7355 10.2298 19.6321 10.4052L19.6289 10.4106C19.4682 10.6786 19.4241 10.9977 19.5063 11.2974C19.5886 11.5971 19.7904 11.8526 20.0671 12.0072C20.7457 12.3865 21.2406 13.013 21.4423 13.7479C21.644 14.4828 21.5359 15.2655 21.1418 15.9227L21.1361 15.9321L20.4222 17.0881C19.6038 18.4481 17.8089 18.9121 16.4029 18.1262C16.2269 18.0287 16.0291 17.9742 15.8267 17.9675C15.5101 17.9685 15.2066 18.0911 14.9826 18.3088C14.7562 18.5287 14.6298 18.8273 14.6313 19.1383L14.6314 19.1465C14.6236 20.7247 13.3045 22 11.6802 22H10.3166C8.68856 22 7.36843 20.7192 7.36546 19.1381C7.36281 18.9477 7.30878 18.7613 7.20874 18.5976L7.20173 18.5859C7.04421 18.3184 6.78322 18.1231 6.47679 18.0434C6.17036 17.9637 5.84386 18.0063 5.56987 18.1616L5.55681 18.1689C4.8719 18.5419 4.06223 18.6343 3.30698 18.4258C2.55466 18.2181 1.91811 17.7287 1.53699 17.0654L0.854082 15.9211L0.853169 15.9196C0.0419494 14.5537 0.5229 12.8076 1.92783 12.0179C2.302 11.808 2.53316 11.4198 2.53316 11C2.53316 10.5802 2.30267 10.1923 1.9285 9.98246L1.92603 9.98108C0.521308 9.18716 0.0415619 7.43925 0.852893 6.07119L0.863451 6.05386L1.58511 4.9013C2.40009 3.53881 4.19523 3.07026 5.60375 3.8544L5.61526 3.86093C5.78357 3.95797 5.97509 4.01046 6.17073 4.01318C6.82764 4.01089 7.36249 3.49934 7.37539 2.86145C7.37433 2.10475 7.68226 1.37836 8.23186 0.841818C8.78385 0.302938 9.5341 1.21402e-07 10.3166 1.21402e-07H11.6802ZM12.5482 2.04828C12.3204 1.82059 12.0074 1.69218 11.6805 1.69231L10.3166 1.69231C9.99749 1.69231 9.69155 1.81585 9.46646 2.03559C9.24137 2.25533 9.11568 2.55317 9.11722 2.86319L9.11714 2.8794C9.09398 4.44684 7.77947 5.70566 6.166 5.7055L6.15704 5.70549C5.65588 5.70044 5.16492 5.56754 4.73327 5.32025C4.15543 5.00168 3.42071 5.19576 3.0887 5.75562L3.07814 5.77295L2.35765 6.92365C2.0316 7.48281 2.2286 8.19361 2.80091 8.51773C3.71311 9.03011 4.27498 9.97619 4.27498 11C4.27498 12.0243 3.71257 12.9708 2.7996 13.483C2.22727 13.805 2.03127 14.5164 2.36145 15.0732L3.04769 16.223L3.05602 16.2373C3.21199 16.5107 3.47367 16.7125 3.78316 16.798C4.09063 16.8829 4.42011 16.846 4.69959 16.6957C5.37325 16.3164 6.17469 16.213 6.92707 16.4086C7.68002 16.6044 8.32162 17.0834 8.71017 17.7397C8.96507 18.1593 9.10202 18.6367 9.10723 19.124L9.10732 19.1327C9.10732 19.7817 9.64871 20.3077 10.3166 20.3077H11.6802C12.3447 20.3077 12.8846 19.7868 12.8895 19.1416C12.8871 18.3807 13.1971 17.6502 13.7509 17.1121C14.306 16.5728 15.0599 16.2715 15.8448 16.2752L15.8639 16.2755C16.3573 16.2883 16.8397 16.4195 17.2682 16.6575L17.2708 16.6589C17.8478 16.9819 18.585 16.7909 18.9198 16.2317L18.9258 16.2218L19.6392 15.0667C19.7979 14.7995 19.8412 14.4821 19.7593 14.1839C19.6771 13.8842 19.4752 13.6288 19.1985 13.4741C18.52 13.0948 18.025 12.4684 17.8233 11.7335C17.6219 10.9996 17.7295 10.2181 18.1222 9.56144C18.3787 9.12739 18.7492 8.76724 19.1958 8.51776C19.7659 8.19192 19.9609 7.48118 19.6329 6.9227C19.6181 6.89747 19.6046 6.87159 19.5926 6.84516L18.9579 5.77501C18.6257 5.21486 17.8903 5.02081 17.3124 5.3401C16.6405 5.72274 15.8398 5.83091 15.0858 5.64071C14.3305 5.45017 13.6842 4.97585 13.289 4.32219C13.0326 3.90165 12.8948 3.42285 12.8896 2.93406C12.8894 2.92304 12.8895 2.91201 12.8899 2.90098C12.8993 2.58357 12.776 2.27598 12.5482 2.04828Z"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M11.0033 9.06124C9.90122 9.06124 9.00783 9.92924 9.00783 11C9.00783 12.0707 9.90122 12.9387 11.0033 12.9387C12.1053 12.9387 12.9987 12.0707 12.9987 11C12.9987 9.92924 12.1053 9.06124 11.0033 9.06124ZM7.26601 11C7.26601 8.99461 8.93924 7.36893 11.0033 7.36893C13.0673 7.36893 14.7406 8.99461 14.7406 11C14.7406 13.0053 13.0673 14.631 11.0033 14.631C8.93925 14.631 7.26601 13.0053 7.26601 11Z"/>
+                                </svg>
+                                <span class="banner__point-text color--main semi-bold">Используем только оригинальные запчасти</span>
+                            </div>
+                            <div class="banner__point button bg--white flex">
+                                <svg viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11 19.6429C14.465 19.6429 17.2857 16.8221 17.2857 13.3571C17.2857 9.89214 14.465 7.07143 11 7.07143C7.53499 7.07143 4.71428 9.89214 4.71428 13.3571C4.71428 16.8221 7.53499 19.6429 11 19.6429ZM11 8.64286C13.6007 8.64286 15.7143 10.7564 15.7143 13.3571C15.7143 15.9579 13.6007 18.0714 11 18.0714C8.39928 18.0714 6.28571 15.9579 6.28571 13.3571C6.28571 10.7564 8.39928 8.64286 11 8.64286Z"/>
+                                    <path d="M18.8571 0H3.14285C1.84642 0 0.785706 1.06071 0.785706 2.35714V19.6429C0.785706 20.9393 1.84642 22 3.14285 22H18.8571C20.1536 22 21.2143 20.9393 21.2143 19.6429V2.35714C21.2143 1.06071 20.1536 0 18.8571 0ZM2.35713 2.35714C2.35713 1.925 2.71071 1.57143 3.14285 1.57143H18.8571C19.2893 1.57143 19.6428 1.925 19.6428 2.35714V4.71429H2.35713V2.35714ZM19.6428 19.6429C19.6428 20.075 19.2893 20.4286 18.8571 20.4286H3.14285C2.71071 20.4286 2.35713 20.075 2.35713 19.6429V6.28571H19.6428V19.6429Z"/>
+                                    <path d="M6.72571 2.49071C6.67856 2.45929 6.63142 2.43571 6.58428 2.42C6.53713 2.39643 6.48999 2.38071 6.44285 2.37286C6.28571 2.34143 6.12856 2.35714 5.98713 2.42C5.89285 2.45929 5.80642 2.51429 5.72785 2.585C5.65713 2.66357 5.60213 2.75 5.56285 2.84429C5.52356 2.93857 5.49999 3.04071 5.49999 3.14286C5.49999 3.34714 5.58642 3.55143 5.72785 3.70071C5.87713 3.84214 6.08142 3.92857 6.28571 3.92857C6.33285 3.92857 6.38785 3.92071 6.44285 3.91286C6.48999 3.905 6.53713 3.88929 6.58428 3.86571C6.63142 3.85 6.67856 3.82643 6.72571 3.795C6.76499 3.76357 6.80428 3.73214 6.84356 3.70071C6.87499 3.66143 6.90642 3.62214 6.93785 3.58286C6.96928 3.53571 6.99285 3.48857 7.00856 3.44143C7.03213 3.39429 7.04785 3.34714 7.05571 3.3C7.06356 3.245 7.07142 3.19 7.07142 3.14286C7.07142 2.93857 6.98499 2.73429 6.84356 2.585C6.80428 2.55357 6.76499 2.51429 6.72571 2.49071ZM8.08499 2.585C7.94356 2.73429 7.85713 2.93857 7.85713 3.14286C7.85713 3.19 7.86499 3.245 7.87285 3.29214C7.88071 3.34714 7.89642 3.39429 7.91999 3.44143C7.93571 3.48857 7.95928 3.53571 7.99071 3.58286C8.02213 3.62214 8.05356 3.66143 8.08499 3.70071C8.23428 3.84214 8.43856 3.92857 8.64285 3.92857C8.68999 3.92857 8.74499 3.92071 8.79999 3.91286C8.84713 3.905 8.89428 3.88929 8.94142 3.86571C8.98856 3.85 9.03571 3.82643 9.08285 3.795C9.12213 3.76357 9.16142 3.73214 9.20071 3.70071C9.23213 3.66143 9.26356 3.62214 9.29499 3.58286C9.32642 3.53571 9.34999 3.48857 9.36571 3.44143C9.38928 3.39429 9.40499 3.34714 9.41285 3.29214C9.4207 3.245 9.42856 3.19 9.42856 3.14286C9.42856 2.93857 9.34213 2.73429 9.20071 2.585C8.90999 2.29429 8.37571 2.29429 8.08499 2.585ZM15.7143 2.35714H13.3571C12.925 2.35714 12.5714 2.71071 12.5714 3.14286C12.5714 3.575 12.925 3.92857 13.3571 3.92857H15.7143C16.1464 3.92857 16.5 3.575 16.5 3.14286C16.5 2.71071 16.1464 2.35714 15.7143 2.35714Z"/>
+                                </svg>
+                                <span class="banner__point-text color--main semi-bold">Обслуживаем любые марки</span>
+                            </div>
+                            <div class="banner__point button bg--white flex">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35 35">
+                                    <path d="M22.33,34.63a10.86,10.86,0,0,1-3.07-.6,9.32,9.32,0,0,0-2.25-.5,10.21,10.21,0,0,0-2.17.35c-1.48.36-3.17.77-4.75.06S7.7,31.7,7,30.35a8.93,8.93,0,0,0-1.17-1.86A9,9,0,0,0,4,27.13c-1.28-.79-2.72-1.69-3.31-3.24S.54,20.7,1,19.27A9.39,9.39,0,0,0,1.47,17a9,9,0,0,0-.35-2.17c-.36-1.48-.77-3.16-.06-4.75A7.21,7.21,0,0,1,4.65,7,8.93,8.93,0,0,0,6.51,5.82,9.32,9.32,0,0,0,7.87,4C8.66,2.67,9.56,1.23,11.12.64S14.3.54,15.74,1a9.22,9.22,0,0,0,2.25.5,9.59,9.59,0,0,0,2.17-.36c1.48-.35,3.17-.76,4.75-.05A7.21,7.21,0,0,1,28,4.65a8.93,8.93,0,0,0,1.17,1.86,9,9,0,0,0,1.87,1.36c1.28.79,2.72,1.69,3.31,3.24s.1,3.19-.33,4.63a9.32,9.32,0,0,0-.5,2.25,9,9,0,0,0,.35,2.17c.36,1.48.77,3.16.06,4.75h0c-.71,1.58-2.24,2.39-3.59,3.1a9.3,9.3,0,0,0-1.87,1.17,9.41,9.41,0,0,0-1.35,1.87c-.79,1.28-1.69,2.72-3.24,3.31A4.28,4.28,0,0,1,22.33,34.63ZM16.92,31h.16a11.34,11.34,0,0,1,2.9.6A5.34,5.34,0,0,0,23,32c.76-.28,1.36-1.26,2-2.29a11.71,11.71,0,0,1,1.77-2.37,11.31,11.31,0,0,1,2.41-1.56,5.28,5.28,0,0,0,2.48-1.92h0a5.26,5.26,0,0,0-.21-3.13A11,11,0,0,1,31,17.92a11.34,11.34,0,0,1,.6-2.9A5.34,5.34,0,0,0,32,12c-.29-.76-1.26-1.36-2.29-2a11.71,11.71,0,0,1-2.37-1.77A11.31,11.31,0,0,1,25.8,5.82a5.34,5.34,0,0,0-1.92-2.48,5.32,5.32,0,0,0-3.13.2A10.06,10.06,0,0,1,17.92,4,11.5,11.5,0,0,1,15,3.37,5.29,5.29,0,0,0,12,3c-.76.29-1.36,1.26-2,2.29A11.71,11.71,0,0,1,8.23,7.64,11.31,11.31,0,0,1,5.82,9.2a5.34,5.34,0,0,0-2.48,1.92,5.32,5.32,0,0,0,.2,3.13A10.49,10.49,0,0,1,4,17.08,11.5,11.5,0,0,1,3.37,20,5.29,5.29,0,0,0,3,23c.29.76,1.26,1.36,2.29,2a11.71,11.71,0,0,1,2.37,1.77A11.31,11.31,0,0,1,9.2,29.18a5.34,5.34,0,0,0,1.92,2.48,5.34,5.34,0,0,0,3.13-.21A11.52,11.52,0,0,1,16.92,31Z"></path>
+                                    <path d="M15.6,22.27a1.22,1.22,0,0,1-.87-.35l-3.6-3.53a1.24,1.24,0,1,1,1.74-1.78l2.74,2.68,6.53-6.22a1.25,1.25,0,1,1,1.72,1.81l-7.4,7A1.23,1.23,0,0,1,15.6,22.27Z"></path>
+                                </svg>
+                                <span class="banner__point-text color--main semi-bold">Гарантия 2 года</span>
+                            </div>
+                        </div>
+                        <form action="" class="banner__form bg--white grid">
+                            <div class="banner__form-top grid">
+                                <h2 class="banner__form-title color--black">Звоните и получите скидку 10%</h2>
+                                <p class="banner__form-descr color--black semi-bold">
+                                    Заявки принимаем круглосуточно
+                                </p>
+                                <a href="tel:+79993331574" class="banner__form-number color--black semi-bold">+7 (999) 333-15-74</a>
+                            </div>
+                            <div class="banner__form-bottom flex">
+                                <input type="tel" name="telephone" class="banner__form-input input bg--light-grey color--black semi-bold" placeholder="Ваш номер телефона" required>
+                                <button type="submit" class="banner__form-save button bg--main color--white semi-bold hover">Получить скидку</button>
+                            </div>
+                        </form>
+                    </div>
+                    <img src="img/banner_image.png" alt="" class="banner__image">
+                </div>
+            </section>
+            <section class="prices section grid">
+                <h2 class="section__title color--black">Прайс лист</h2>
+                <div class="prices__blocks grid">
+                    <div id="price-1" class="prices__block shadow bg--white grid">
+                        <div class="prices__top flex hover" easy-toggle="#price-1" easy-class="open" easy-parallel>
+                            <h3 class="prices__title color--black">Стиральная машина не включается</h3>
+                            <svg class="hover" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 15V9H15C15.2652 9 15.5196 8.89464 15.7071 8.70711C15.8946 8.51957 16 8.26522 16 8C16 7.73478 15.8946 7.48043 15.7071 7.29289C15.5196 7.10536 15.2652 7 15 7L9 7L9 1C9 0.734784 8.89464 0.48043 8.70711 0.292893C8.51957 0.105357 8.26522 1.1178e-08 8 0C7.73478 -1.1178e-08 7.48043 0.105357 7.29289 0.292893C7.10536 0.48043 7 0.734783 7 1V7L1 7C0.734784 7 0.480429 7.10536 0.292893 7.29289C0.105356 7.48043 1.1178e-08 7.73478 0 8C-1.1178e-08 8.26522 0.105356 8.51957 0.292893 8.70711C0.480429 8.89464 0.734784 9 1 9H7V15C7 15.2652 7.10536 15.5196 7.29289 15.7071C7.48043 15.8946 7.73478 16 8 16C8.26522 16 8.51957 15.8946 8.70711 15.7071C8.89464 15.5196 9 15.2652 9 15Z"/>
+                            </svg>
+                        </div>
+                        <div class="prices__bottom grid">
+                            <div class="prices__service bg--light-grey flex">
+                                <div class="prices__service-title color--black semi-bold">Провод питания или тумблер (кнопка)</div>
+                                <div class="prices__service-right-area flex">
+                                    <span class="prices__service-price color--black semi-bold">от 250 рублей</span>
+                                    <button class="prices__service-action button color--white semi-bold bg--main hover" easy-add="#modal" easy-class="show">Заказать</button>
+                                </div>
+                            </div>
+                            <div class="prices__service bg--light-grey flex">
+                                <div class="prices__service-title color--black semi-bold">Электрическая плата управления машинкой</div>
+                                <div class="prices__service-right-area flex">
+                                    <span class="prices__service-price color--black semi-bold">от 950 рублей</span>
+                                    <button class="prices__service-action button color--white semi-bold bg--main hover" easy-add="#modal" easy-class="show">Заказать</button>
+                                </div>
+                            </div>
+                            <div class="prices__service bg--light-grey flex">
+                                <div class="prices__service-title color--black semi-bold">Переключатель программ машинки</div>
+                                <div class="prices__service-right-area flex">
+                                    <span class="prices__service-price color--black semi-bold">от 850 рублей</span>
+                                    <button class="prices__service-action button color--white semi-bold bg--main hover" easy-add="#modal" easy-class="show">Заказать</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="price-2" class="prices__block shadow bg--white grid">
+                        <div class="prices__top flex hover" easy-toggle="#price-2" easy-class="open" easy-parallel>
+                            <h3 class="prices__title color--black">Стиральная машина не отжимает белье</h3>
+                            <svg class="hover" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 15V9H15C15.2652 9 15.5196 8.89464 15.7071 8.70711C15.8946 8.51957 16 8.26522 16 8C16 7.73478 15.8946 7.48043 15.7071 7.29289C15.5196 7.10536 15.2652 7 15 7L9 7L9 1C9 0.734784 8.89464 0.48043 8.70711 0.292893C8.51957 0.105357 8.26522 1.1178e-08 8 0C7.73478 -1.1178e-08 7.48043 0.105357 7.29289 0.292893C7.10536 0.48043 7 0.734783 7 1V7L1 7C0.734784 7 0.480429 7.10536 0.292893 7.29289C0.105356 7.48043 1.1178e-08 7.73478 0 8C-1.1178e-08 8.26522 0.105356 8.51957 0.292893 8.70711C0.480429 8.89464 0.734784 9 1 9H7V15C7 15.2652 7.10536 15.5196 7.29289 15.7071C7.48043 15.8946 7.73478 16 8 16C8.26522 16 8.51957 15.8946 8.70711 15.7071C8.89464 15.5196 9 15.2652 9 15Z"/>
+                            </svg>
+                        </div>
+                        <div class="prices__bottom grid">
+                            <div class="prices__service bg--light-grey flex">
+                                <div class="prices__service-title color--black semi-bold">Ремень привода</div>
+                                <div class="prices__service-right-area flex">
+                                    <span class="prices__service-price color--black semi-bold">от 350 рублей</span>
+                                    <button class="prices__service-action button color--white semi-bold bg--main hover" easy-add="#modal" easy-class="show">Заказать</button>
+                                </div>
+                            </div>
+                            <div class="prices__service bg--light-grey flex">
+                                <div class="prices__service-title color--black semi-bold">Шкив барабана</div>
+                                <div class="prices__service-right-area flex">
+                                    <span class="prices__service-price color--black semi-bold">от 650 рублей</span>
+                                    <button class="prices__service-action button color--white semi-bold bg--main hover" easy-add="#modal" easy-class="show">Заказать</button>
+                                </div>
+                            </div>
+                            <div class="prices__service bg--light-grey flex">
+                                <div class="prices__service-title color--black semi-bold">Двигатель машинки</div>
+                                <div class="prices__service-right-area flex">
+                                    <span class="prices__service-price color--black semi-bold">от 830 рублей</span>
+                                    <button class="prices__service-action button color--white semi-bold bg--main hover" easy-add="#modal" easy-class="show">Заказать</button>
+                                </div>
+                            </div>
+                            <div class="prices__service bg--light-grey flex">
+                                <div class="prices__service-title color--black semi-bold">Щётки электродвигателя</div>
+                                <div class="prices__service-right-area flex">
+                                    <span class="prices__service-price color--black semi-bold">от 420 рублей</span>
+                                    <button class="prices__service-action button color--white semi-bold bg--main hover" easy-add="#modal" easy-class="show">Заказать</button>
+                                </div>
+                            </div>
+                            <div class="prices__service bg--light-grey flex">
+                                <div class="prices__service-title color--black semi-bold">Подшипники, сальники, пыльники</div>
+                                <div class="prices__service-right-area flex">
+                                    <span class="prices__service-price color--black semi-bold">от 950 рублей</span>
+                                    <button class="prices__service-action button color--white semi-bold bg--main hover" easy-add="#modal" easy-class="show">Заказать</button>
+                                </div>
+                            </div>
+                            <div class="prices__service bg--light-grey flex">
+                                <div class="prices__service-title color--black semi-bold">Электрическая плата управления</div>
+                                <div class="prices__service-right-area flex">
+                                    <span class="prices__service-price color--black semi-bold">от 930 рублей</span>
+                                    <button class="prices__service-action button color--white semi-bold bg--main hover" easy-add="#modal" easy-class="show">Заказать</button>
+                                </div>
+                            </div>
+                            <div class="prices__service bg--light-grey flex">
+                                <div class="prices__service-title color--black semi-bold">Командоаппарат</div>
+                                <div class="prices__service-right-area flex">
+                                    <span class="prices__service-price color--black semi-bold">от 850 рублей</span>
+                                    <button class="prices__service-action button color--white semi-bold bg--main hover" easy-add="#modal" easy-class="show">Заказать</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="price-3" class="prices__block shadow bg--white grid">
+                        <div class="prices__top flex hover" easy-toggle="#price-3" easy-class="open" easy-parallel>
+                            <h3 class="prices__title color--black">Машинка не сливает воду</h3>
+                            <svg class="hover" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 15V9H15C15.2652 9 15.5196 8.89464 15.7071 8.70711C15.8946 8.51957 16 8.26522 16 8C16 7.73478 15.8946 7.48043 15.7071 7.29289C15.5196 7.10536 15.2652 7 15 7L9 7L9 1C9 0.734784 8.89464 0.48043 8.70711 0.292893C8.51957 0.105357 8.26522 1.1178e-08 8 0C7.73478 -1.1178e-08 7.48043 0.105357 7.29289 0.292893C7.10536 0.48043 7 0.734783 7 1V7L1 7C0.734784 7 0.480429 7.10536 0.292893 7.29289C0.105356 7.48043 1.1178e-08 7.73478 0 8C-1.1178e-08 8.26522 0.105356 8.51957 0.292893 8.70711C0.480429 8.89464 0.734784 9 1 9H7V15C7 15.2652 7.10536 15.5196 7.29289 15.7071C7.48043 15.8946 7.73478 16 8 16C8.26522 16 8.51957 15.8946 8.70711 15.7071C8.89464 15.5196 9 15.2652 9 15Z"/>
+                            </svg>
+                        </div>
+                        <div class="prices__bottom grid">
+                            <div class="prices__service bg--light-grey flex">
+                                <div class="prices__service-title color--black semi-bold">Шланги для слива воды и дренажная система</div>
+                                <div class="prices__service-right-area flex">
+                                    <span class="prices__service-price color--black semi-bold">от 300 рублей</span>
+                                    <button class="prices__service-action button color--white semi-bold bg--main hover" easy-add="#modal" easy-class="show">Заказать</button>
+                                </div>
+                            </div>
+                            <div class="prices__service bg--light-grey flex">
+                                <div class="prices__service-title color--black semi-bold">Засорен фильтр воды</div>
+                                <div class="prices__service-right-area flex">
+                                    <span class="prices__service-price color--black semi-bold">от 600 рублей</span>
+                                    <button class="prices__service-action button color--white semi-bold bg--main hover" easy-add="#modal" easy-class="show">Заказать</button>
+                                </div>
+                            </div>
+                            <div class="prices__service bg--light-grey flex">
+                                <div class="prices__service-title color--black semi-bold">Насос водяной</div>
+                                <div class="prices__service-right-area flex">
+                                    <span class="prices__service-price color--black semi-bold">от 600 рублей</span>
+                                    <button class="prices__service-action button color--white semi-bold bg--main hover" easy-add="#modal" easy-class="show">Заказать</button>
+                                </div>
+                            </div>
+                            <div class="prices__service bg--light-grey flex">
+                                <div class="prices__service-title color--black semi-bold">Электрическая плата управления</div>
+                                <div class="prices__service-right-area flex">
+                                    <span class="prices__service-price color--black semi-bold">от 900 рублей</span>
+                                    <button class="prices__service-action button color--white semi-bold bg--main hover" easy-add="#modal" easy-class="show">Заказать</button>
+                                </div>
+                            </div>
+                            <div class="prices__service bg--light-grey flex">
+                                <div class="prices__service-title color--black semi-bold">Командоаппарат</div>
+                                <div class="prices__service-right-area flex">
+                                    <span class="prices__service-price color--black semi-bold">от 850 рублей</span>
+                                    <button class="prices__service-action button color--white semi-bold bg--main hover" easy-add="#modal" easy-class="show">Заказать</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="price-4" class="prices__block shadow bg--white grid">
+                        <div class="prices__top flex hover" easy-toggle="#price-4" easy-class="open" easy-parallel>
+                            <h3 class="prices__title color--black">Машинка не заливает воду</h3>
+                            <svg class="hover" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 15V9H15C15.2652 9 15.5196 8.89464 15.7071 8.70711C15.8946 8.51957 16 8.26522 16 8C16 7.73478 15.8946 7.48043 15.7071 7.29289C15.5196 7.10536 15.2652 7 15 7L9 7L9 1C9 0.734784 8.89464 0.48043 8.70711 0.292893C8.51957 0.105357 8.26522 1.1178e-08 8 0C7.73478 -1.1178e-08 7.48043 0.105357 7.29289 0.292893C7.10536 0.48043 7 0.734783 7 1V7L1 7C0.734784 7 0.480429 7.10536 0.292893 7.29289C0.105356 7.48043 1.1178e-08 7.73478 0 8C-1.1178e-08 8.26522 0.105356 8.51957 0.292893 8.70711C0.480429 8.89464 0.734784 9 1 9H7V15C7 15.2652 7.10536 15.5196 7.29289 15.7071C7.48043 15.8946 7.73478 16 8 16C8.26522 16 8.51957 15.8946 8.70711 15.7071C8.89464 15.5196 9 15.2652 9 15Z"/>
+                            </svg>
+                        </div>
+                        <div class="prices__bottom grid">
+                            <div class="prices__service bg--light-grey flex">
+                                <div class="prices__service-title color--black semi-bold">Клапан электромагнитный</div>
+                                <div class="prices__service-right-area flex">
+                                    <span class="prices__service-price color--black semi-bold">от 400 рублей</span>
+                                    <button class="prices__service-action button color--white semi-bold bg--main hover" easy-add="#modal" easy-class="show">Заказать</button>
+                                </div>
+                            </div>
+                            <div class="prices__service bg--light-grey flex">
+                                <div class="prices__service-title color--black semi-bold">Электро плата управления</div>
+                                <div class="prices__service-right-area flex">
+                                    <span class="prices__service-price color--black semi-bold">от 930 рублей</span>
+                                    <button class="prices__service-action button color--white semi-bold bg--main hover" easy-add="#modal" easy-class="show">Заказать</button>
+                                </div>
+                            </div>
+                            <div class="prices__service bg--light-grey flex">
+                                <div class="prices__service-title color--black semi-bold">Командоаппарат</div>
+                                <div class="prices__service-right-area flex">
+                                    <span class="prices__service-price color--black semi-bold">от 900 рублей</span>
+                                    <button class="prices__service-action button color--white semi-bold bg--main hover" easy-add="#modal" easy-class="show">Заказать</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="price-5" class="prices__block shadow bg--white grid">
+                        <div class="prices__top flex hover" easy-toggle="#price-5" easy-class="open" easy-parallel>
+                            <h3 class="prices__title color--black">Машинка не нагревает воду</h3>
+                            <svg class="hover" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 15V9H15C15.2652 9 15.5196 8.89464 15.7071 8.70711C15.8946 8.51957 16 8.26522 16 8C16 7.73478 15.8946 7.48043 15.7071 7.29289C15.5196 7.10536 15.2652 7 15 7L9 7L9 1C9 0.734784 8.89464 0.48043 8.70711 0.292893C8.51957 0.105357 8.26522 1.1178e-08 8 0C7.73478 -1.1178e-08 7.48043 0.105357 7.29289 0.292893C7.10536 0.48043 7 0.734783 7 1V7L1 7C0.734784 7 0.480429 7.10536 0.292893 7.29289C0.105356 7.48043 1.1178e-08 7.73478 0 8C-1.1178e-08 8.26522 0.105356 8.51957 0.292893 8.70711C0.480429 8.89464 0.734784 9 1 9H7V15C7 15.2652 7.10536 15.5196 7.29289 15.7071C7.48043 15.8946 7.73478 16 8 16C8.26522 16 8.51957 15.8946 8.70711 15.7071C8.89464 15.5196 9 15.2652 9 15Z"/>
+                            </svg>
+                        </div>
+                        <div class="prices__bottom grid">
+                            <div class="prices__service bg--light-grey flex">
+                                <div class="prices__service-title color--black semi-bold">Электрический водонагревательный тен</div>
+                                <div class="prices__service-right-area flex">
+                                    <span class="prices__service-price color--black semi-bold">от 500 рублей</span>
+                                    <button class="prices__service-action button color--white semi-bold bg--main hover" easy-add="#modal" easy-class="show">Заказать</button>
+                                </div>
+                            </div>
+                            <div class="prices__service bg--light-grey flex">
+                                <div class="prices__service-title color--black semi-bold">Электрическая плата управления</div>
+                                <div class="prices__service-right-area flex">
+                                    <span class="prices__service-price color--black semi-bold">от 900 рублей</span>
+                                    <button class="prices__service-action button color--white semi-bold bg--main hover" easy-add="#modal" easy-class="show">Заказать</button>
+                                </div>
+                            </div>
+                            <div class="prices__service bg--light-grey flex">
+                                <div class="prices__service-title color--black semi-bold">Командоаппарат</div>
+                                <div class="prices__service-right-area flex">
+                                    <span class="prices__service-price color--black semi-bold">от 850 рублей</span>
+                                    <button class="prices__service-action button color--white semi-bold bg--main hover" easy-add="#modal" easy-class="show">Заказать</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="price-6" class="prices__block shadow bg--white grid">
+                        <div class="prices__top flex hover" easy-toggle="#price-6" easy-class="open" easy-parallel>
+                            <h3 class="prices__title color--black">У машинки течёт вода</h3>
+                            <svg class="hover" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 15V9H15C15.2652 9 15.5196 8.89464 15.7071 8.70711C15.8946 8.51957 16 8.26522 16 8C16 7.73478 15.8946 7.48043 15.7071 7.29289C15.5196 7.10536 15.2652 7 15 7L9 7L9 1C9 0.734784 8.89464 0.48043 8.70711 0.292893C8.51957 0.105357 8.26522 1.1178e-08 8 0C7.73478 -1.1178e-08 7.48043 0.105357 7.29289 0.292893C7.10536 0.48043 7 0.734783 7 1V7L1 7C0.734784 7 0.480429 7.10536 0.292893 7.29289C0.105356 7.48043 1.1178e-08 7.73478 0 8C-1.1178e-08 8.26522 0.105356 8.51957 0.292893 8.70711C0.480429 8.89464 0.734784 9 1 9H7V15C7 15.2652 7.10536 15.5196 7.29289 15.7071C7.48043 15.8946 7.73478 16 8 16C8.26522 16 8.51957 15.8946 8.70711 15.7071C8.89464 15.5196 9 15.2652 9 15Z"/>
+                            </svg>
+                        </div>
+                        <div class="prices__bottom grid">
+                            <div class="prices__service bg--light-grey flex">
+                                <div class="prices__service-title color--black semi-bold">Резинка уплотнительная люка</div>
+                                <div class="prices__service-right-area flex">
+                                    <span class="prices__service-price color--black semi-bold">от 800 рублей</span>
+                                    <button class="prices__service-action button color--white semi-bold bg--main hover" easy-add="#modal" easy-class="show">Заказать</button>
+                                </div>
+                            </div>
+                            <div class="prices__service bg--light-grey flex">
+                                <div class="prices__service-title color--black semi-bold">Шланги</div>
+                                <div class="prices__service-right-area flex">
+                                    <span class="prices__service-price color--black semi-bold">от 250 рублей</span>
+                                    <button class="prices__service-action button color--white semi-bold bg--main hover" easy-add="#modal" easy-class="show">Заказать</button>
+                                </div>
+                            </div>
+                            <div class="prices__service bg--light-grey flex">
+                                <div class="prices__service-title color--black semi-bold">Фильтр воды</div>
+                                <div class="prices__service-right-area flex">
+                                    <span class="prices__service-price color--black semi-bold">от 600 рублей</span>
+                                    <button class="prices__service-action button color--white semi-bold bg--main hover" easy-add="#modal" easy-class="show">Заказать</button>
+                                </div>
+                            </div>
+                            <div class="prices__service bg--light-grey flex">
+                                <div class="prices__service-title color--black semi-bold">Бак или барабан</div>
+                                <div class="prices__service-right-area flex">
+                                    <span class="prices__service-price color--black semi-bold">от 900 рублей</span>
+                                    <button class="prices__service-action button color--white semi-bold bg--main hover" easy-add="#modal" easy-class="show">Заказать</button>
+                                </div>
+                            </div>
+                            <div class="prices__service bg--light-grey flex">
+                                <div class="prices__service-title color--black semi-bold">Дозатор</div>
+                                <div class="prices__service-right-area flex">
+                                    <span class="prices__service-price color--black semi-bold">от 250 рублей</span>
+                                    <button class="prices__service-action button color--white semi-bold bg--main hover" easy-add="#modal" easy-class="show">Заказать</button>
+                                </div>
+                            </div>
+                            <div class="prices__service bg--light-grey flex">
+                                <div class="prices__service-title color--black semi-bold">Насос водяной</div>
+                                <div class="prices__service-right-area flex">
+                                    <span class="prices__service-price color--black semi-bold">от 800 рублей</span>
+                                    <button class="prices__service-action button color--white semi-bold bg--main hover" easy-add="#modal" easy-class="show">Заказать</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="price-7" class="prices__block shadow bg--white grid">
+                        <div class="prices__top flex hover" easy-toggle="#price-7" easy-class="open" easy-parallel>
+                            <h3 class="prices__title color--black">У машинки не открывается люк</h3>
+                            <svg class="hover" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 15V9H15C15.2652 9 15.5196 8.89464 15.7071 8.70711C15.8946 8.51957 16 8.26522 16 8C16 7.73478 15.8946 7.48043 15.7071 7.29289C15.5196 7.10536 15.2652 7 15 7L9 7L9 1C9 0.734784 8.89464 0.48043 8.70711 0.292893C8.51957 0.105357 8.26522 1.1178e-08 8 0C7.73478 -1.1178e-08 7.48043 0.105357 7.29289 0.292893C7.10536 0.48043 7 0.734783 7 1V7L1 7C0.734784 7 0.480429 7.10536 0.292893 7.29289C0.105356 7.48043 1.1178e-08 7.73478 0 8C-1.1178e-08 8.26522 0.105356 8.51957 0.292893 8.70711C0.480429 8.89464 0.734784 9 1 9H7V15C7 15.2652 7.10536 15.5196 7.29289 15.7071C7.48043 15.8946 7.73478 16 8 16C8.26522 16 8.51957 15.8946 8.70711 15.7071C8.89464 15.5196 9 15.2652 9 15Z"/>
+                            </svg>
+                        </div>
+                        <div class="prices__bottom grid">
+                            <div class="prices__service bg--light-grey flex">
+                                <div class="prices__service-title color--black semi-bold">Разблокировка люка</div>
+                                <div class="prices__service-right-area flex">
+                                    <span class="prices__service-price color--black semi-bold">от 400 рублей</span>
+                                    <button class="prices__service-action button color--white semi-bold bg--main hover" easy-add="#modal" easy-class="show">Заказать</button>
+                                </div>
+                            </div>
+                            <div class="prices__service bg--light-grey flex">
+                                <div class="prices__service-title color--black semi-bold">Блокировка люка</div>
+                                <div class="prices__service-right-area flex">
+                                    <span class="prices__service-price color--black semi-bold">от 630 рублей</span>
+                                    <button class="prices__service-action button color--white semi-bold bg--main hover" easy-add="#modal" easy-class="show">Заказать</button>
+                                </div>
+                            </div>
+                            <div class="prices__service bg--light-grey flex">
+                                <div class="prices__service-title color--black semi-bold">Загрузочный люк</div>
+                                <div class="prices__service-right-area flex">
+                                    <span class="prices__service-price color--black semi-bold">от 750 рублей</span>
+                                    <button class="prices__service-action button color--white semi-bold bg--main hover" easy-add="#modal" easy-class="show">Заказать</button>
+                                </div>
+                            </div>
+                            <div class="prices__service bg--light-grey flex">
+                                <div class="prices__service-title color--black semi-bold">Замок стиральной машинки</div>
+                                <div class="prices__service-right-area flex">
+                                    <span class="prices__service-price color--black semi-bold">от 250 рублей</span>
+                                    <button class="prices__service-action button color--white semi-bold bg--main hover" easy-add="#modal" easy-class="show">Заказать</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="price-8" class="prices__block shadow bg--white grid">
+                        <div class="prices__top flex hover" easy-toggle="#price-8" easy-class="open" easy-parallel>
+                            <h3 class="prices__title color--black">Вибрирует или гремит</h3>
+                            <svg class="hover" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 15V9H15C15.2652 9 15.5196 8.89464 15.7071 8.70711C15.8946 8.51957 16 8.26522 16 8C16 7.73478 15.8946 7.48043 15.7071 7.29289C15.5196 7.10536 15.2652 7 15 7L9 7L9 1C9 0.734784 8.89464 0.48043 8.70711 0.292893C8.51957 0.105357 8.26522 1.1178e-08 8 0C7.73478 -1.1178e-08 7.48043 0.105357 7.29289 0.292893C7.10536 0.48043 7 0.734783 7 1V7L1 7C0.734784 7 0.480429 7.10536 0.292893 7.29289C0.105356 7.48043 1.1178e-08 7.73478 0 8C-1.1178e-08 8.26522 0.105356 8.51957 0.292893 8.70711C0.480429 8.89464 0.734784 9 1 9H7V15C7 15.2652 7.10536 15.5196 7.29289 15.7071C7.48043 15.8946 7.73478 16 8 16C8.26522 16 8.51957 15.8946 8.70711 15.7071C8.89464 15.5196 9 15.2652 9 15Z"/>
+                            </svg>
+                        </div>
+                        <div class="prices__bottom grid">
+                            <div class="prices__service bg--light-grey flex">
+                                <div class="prices__service-title color--black semi-bold">Амортизаторы бака или барабана</div>
+                                <div class="prices__service-right-area flex">
+                                    <span class="prices__service-price color--black semi-bold">от 850 рублей</span>
+                                    <button class="prices__service-action button color--white semi-bold bg--main hover" easy-add="#modal" easy-class="show">Заказать</button>
+                                </div>
+                            </div>
+                            <div class="prices__service bg--light-grey flex">
+                                <div class="prices__service-title color--black semi-bold">Шкив барабана</div>
+                                <div class="prices__service-right-area flex">
+                                    <span class="prices__service-price color--black semi-bold">от 650 рублей</span>
+                                    <button class="prices__service-action button color--white semi-bold bg--main hover" easy-add="#modal" easy-class="show">Заказать</button>
+                                </div>
+                            </div>
+                            <div class="prices__service bg--light-grey flex">
+                                <div class="prices__service-title color--black semi-bold">Сальники барабана</div>
+                                <div class="prices__service-right-area flex">
+                                    <span class="prices__service-price color--black semi-bold">от 320 рублей</span>
+                                    <button class="prices__service-action button color--white semi-bold bg--main hover" easy-add="#modal" easy-class="show">Заказать</button>
+                                </div>
+                            </div>
+                            <div class="prices__service bg--light-grey flex">
+                                <div class="prices__service-title color--black semi-bold">Подшипники пыльники</div>
+                                <div class="prices__service-right-area flex">
+                                    <span class="prices__service-price color--black semi-bold">от 900 рублей</span>
+                                    <button class="prices__service-action button color--white semi-bold bg--main hover" easy-add="#modal" easy-class="show">Заказать</button>
+                                </div>
+                            </div>
+                            <div class="prices__service bg--light-grey flex">
+                                <div class="prices__service-title color--black semi-bold">Сальники</div>
+                                <div class="prices__service-right-area flex">
+                                    <span class="prices__service-price color--black semi-bold">от 850 рублей</span>
+                                    <button class="prices__service-action button color--white semi-bold bg--main hover" easy-add="#modal" easy-class="show">Заказать</button>
+                                </div>
+                            </div>
+                            <div class="prices__service bg--light-grey flex">
+                                <div class="prices__service-title color--black semi-bold">Пыльники</div>
+                                <div class="prices__service-right-area flex">
+                                    <span class="prices__service-price color--black semi-bold">от 750 рублей</span>
+                                    <button class="prices__service-action button color--white semi-bold bg--main hover" easy-add="#modal" easy-class="show">Заказать</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="price-9" class="prices__block shadow bg--white grid">
+                        <div class="prices__top flex hover" easy-toggle="#price-9" easy-class="open" easy-parallel>
+                            <h3 class="prices__title color--black">Не вращается барабан</h3>
+                            <svg class="hover" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 15V9H15C15.2652 9 15.5196 8.89464 15.7071 8.70711C15.8946 8.51957 16 8.26522 16 8C16 7.73478 15.8946 7.48043 15.7071 7.29289C15.5196 7.10536 15.2652 7 15 7L9 7L9 1C9 0.734784 8.89464 0.48043 8.70711 0.292893C8.51957 0.105357 8.26522 1.1178e-08 8 0C7.73478 -1.1178e-08 7.48043 0.105357 7.29289 0.292893C7.10536 0.48043 7 0.734783 7 1V7L1 7C0.734784 7 0.480429 7.10536 0.292893 7.29289C0.105356 7.48043 1.1178e-08 7.73478 0 8C-1.1178e-08 8.26522 0.105356 8.51957 0.292893 8.70711C0.480429 8.89464 0.734784 9 1 9H7V15C7 15.2652 7.10536 15.5196 7.29289 15.7071C7.48043 15.8946 7.73478 16 8 16C8.26522 16 8.51957 15.8946 8.70711 15.7071C8.89464 15.5196 9 15.2652 9 15Z"/>
+                            </svg>
+                        </div>
+                        <div class="prices__bottom grid">
+                            <div class="prices__service bg--light-grey flex">
+                                <div class="prices__service-title color--black semi-bold">Приводной ремень</div>
+                                <div class="prices__service-right-area flex">
+                                    <span class="prices__service-price color--black semi-bold">от 320 рублей</span>
+                                    <button class="prices__service-action button color--white semi-bold bg--main hover" easy-add="#modal" easy-class="show">Заказать</button>
+                                </div>
+                            </div>
+                            <div class="prices__service bg--light-grey flex">
+                                <div class="prices__service-title color--black semi-bold">Электрическая плата управления</div>
+                                <div class="prices__service-right-area flex">
+                                    <span class="prices__service-price color--black semi-bold">от 930 рублей</span>
+                                    <button class="prices__service-action button color--white semi-bold bg--main hover" easy-add="#modal" easy-class="show">Заказать</button>
+                                </div>
+                            </div>
+                            <div class="prices__service bg--light-grey flex">
+                                <div class="prices__service-title color--black semi-bold">Командоаппарат</div>
+                                <div class="prices__service-right-area flex">
+                                    <span class="prices__service-price color--black semi-bold">от 850 рублей</span>
+                                    <button class="prices__service-action button color--white semi-bold bg--main hover" easy-add="#modal" easy-class="show">Заказать</button>
+                                </div>
+                            </div>
+                            <div class="prices__service bg--light-grey flex">
+                                <div class="prices__service-title color--black semi-bold">Электро тэн</div>
+                                <div class="prices__service-right-area flex">
+                                    <span class="prices__service-price color--black semi-bold">от 500 рублей</span>
+                                    <button class="prices__service-action button color--white semi-bold bg--main hover" easy-add="#modal" easy-class="show">Заказать</button>
+                                </div>
+                            </div>
+                            <div class="prices__service bg--light-grey flex">
+                                <div class="prices__service-title color--black semi-bold">Электродвигатель машинки</div>
+                                <div class="prices__service-right-area flex">
+                                    <span class="prices__service-price color--black semi-bold">от 800 рублей</span>
+                                    <button class="prices__service-action button color--white semi-bold bg--main hover" easy-add="#modal" easy-class="show">Заказать</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="stages section grid">
+                <h2 class="section__title color--black">Этапы работы</h2>
+                <div class="stages__blocks grid">
+                    <div class="stages__block bg--white shadow grid">
+                        <div class="stages__top flex">
+                            <svg viewBox="0 0 24 30" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M18 0H6C2.69085 0 0 2.6916 0 6V24C0 27.3084 2.69085 30 6 30H18C21.3092 30 24 27.3084 24 24V6C24 2.6916 21.3092 0 18 0ZM21 24C21 25.6545 19.6537 27 18 27H6C4.34625 27 3 25.6545 3 24V6C3 4.3455 4.34625 3 6 3H18C19.6537 3 21 4.3455 21 6V24Z"/>
+                                <path d="M7.5 16.5H10.5C11.3291 16.5 12 15.8283 12 15C12 14.1717 11.3291 13.5 10.5 13.5H7.5C6.67095 13.5 6 14.1717 6 15C6 15.8283 6.67095 16.5 7.5 16.5ZM16.5 19.5H7.5C6.67095 19.5 6 20.1717 6 21C6 21.8283 6.67095 22.5 7.5 22.5H16.5C17.3291 22.5 18 21.8283 18 21C18 20.1717 17.3291 19.5 16.5 19.5Z"/>
+                            </svg>
+                            <h3 class="stages__title color--main">Оформление заявки</h3>
+                        </div>
+                        <p class="stages__descr color--light-black medium">
+                            Сделайте заявку удобным для вас способом, по телефону или заполните любую онлайн форму на сайте.
+                        </p>
+                    </div>
+                    <div class="stages__block bg--white shadow grid">
+                        <div class="stages__top flex">
+                            <svg viewBox="0 0 53 30" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.26895 26.0039H3.99618C1.97318 26.0039 0.333344 24.3641 0.333344 22.3411V3.66283C0.333344 1.63984 1.97318 0 3.99618 0H28.9153C30.7542 0 32.2762 1.35486 32.5384 3.12047H37.4627C40.4393 3.12047 43.6755 4.84999 44.9258 7.55121C45.4098 8.59774 45.932 9.72546 46.3581 10.6467C46.7031 11.3918 47.3245 11.9735 48.0913 12.268C48.0919 12.268 48.0919 12.268 48.0924 12.2685C50.9714 13.374 52.3411 16.1394 52.3411 19.2238V22.8203C52.3411 24.5785 50.9157 26.0039 49.1575 26.0039H46.6102C45.76 28.3342 43.5226 30 40.8994 30C38.2762 30 36.0388 28.3342 35.1886 26.0039H18.69C17.8403 28.3342 15.6029 30 12.9797 30C10.3565 30 8.11912 28.3342 7.26895 26.0039ZM12.9797 19.9275C15.1853 19.9275 16.9758 21.718 16.9758 23.9236C16.9758 26.1291 15.1853 27.9197 12.9797 27.9197C10.7742 27.9197 8.98362 26.1291 8.98362 23.9236C8.98362 21.718 10.7742 19.9275 12.9797 19.9275ZM40.8994 19.9275C43.105 19.9275 44.8955 21.718 44.8955 23.9236C44.8955 26.1291 43.105 27.9197 40.8994 27.9197C38.6939 27.9197 36.9033 26.1291 36.9033 23.9236C36.9033 21.718 38.6939 19.9275 40.8994 19.9275ZM46.9758 23.9236H49.1575C49.7667 23.9236 50.2608 23.4295 50.2608 22.8203V19.2238C50.2608 17.0007 49.4218 15.0074 47.3463 14.2103C47.3463 14.2103 47.3457 14.2103 47.3457 14.2098C46.0737 13.7216 45.042 12.7568 44.4699 11.5203C44.0438 10.599 43.5221 9.47125 43.0376 8.42473C42.128 6.45905 39.6289 5.20078 37.4627 5.20078H32.5782V23.9236H34.823C34.823 20.5696 37.5454 17.8472 40.8994 17.8472C44.2534 17.8472 46.9758 20.5696 46.9758 23.9236ZM19.0561 23.9236H30.4979V3.66283C30.4979 2.78878 29.7894 2.08031 28.9153 2.08031H3.99618C3.12213 2.08031 2.41366 2.78878 2.41366 3.66283V22.3411C2.41366 23.2151 3.12213 23.9236 3.99618 23.9236H6.90331C6.90331 20.5696 9.62575 17.8472 12.9797 17.8472C16.3332 17.8472 19.0561 20.5696 19.0561 23.9236ZM26.8573 14.5622H16.4558C15.8815 14.5622 15.4156 15.0281 15.4156 15.6023C15.4156 16.1765 15.8815 16.6425 16.4558 16.6425H26.8573C27.4315 16.6425 27.8975 16.1765 27.8975 15.6023C27.8975 15.0281 27.4315 14.5622 26.8573 14.5622ZM34.6585 13.5326C34.6585 14.6816 35.5898 15.6129 36.7388 15.6129H39.7027C40.278 15.6129 40.8272 15.3747 41.2205 14.9549C41.6143 14.5351 41.8159 13.971 41.7782 13.3973C41.7782 13.3973 41.7777 13.383 41.7761 13.357C41.6058 10.7523 39.8614 8.51601 37.3762 7.71679C36.743 7.51353 36.0505 7.62445 35.5134 8.0161C34.9764 8.40775 34.6585 9.03237 34.6585 9.69733V13.5326ZM36.7388 13.5326H39.7027C39.7027 13.5326 39.7016 13.5188 39.7001 13.4928C39.5854 11.74 38.4115 10.2349 36.7393 9.69733L36.7388 13.5326ZM26.8573 9.3614H11.255C10.6808 9.3614 10.2148 9.82735 10.2148 10.4016C10.2148 10.9758 10.6808 11.4417 11.255 11.4417H26.8573C27.4315 11.4417 27.8975 10.9758 27.8975 10.4016C27.8975 9.82735 27.4315 9.3614 26.8573 9.3614ZM26.8573 4.16062H6.0542C5.47999 4.16062 5.01404 4.62657 5.01404 5.20078C5.01404 5.77499 5.47999 6.24093 6.0542 6.24093H26.8573C27.4315 6.24093 27.8975 5.77499 27.8975 5.20078C27.8975 4.62657 27.4315 4.16062 26.8573 4.16062Z"/>
+                            </svg>
+                            <h3 class="stages__title color--main">Выезд специалиста</h3>
+                        </div>
+                        <p class="stages__descr color--light-black medium">
+                            Мастер связывается, уточняет с вами и согласовывает удобное время визита.
+                        </p>
+                    </div>
+                    <div class="stages__block bg--white shadow grid">
+                        <div class="stages__top flex">
+                            <svg viewBox="0 0 31 30" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4.20404 20.6108C6.28233 22.6914 9.04995 23.9405 11.9855 24.1226C14.9211 24.3047 17.822 23.4074 20.1416 21.5996L28.1232 29.5788C28.4062 29.8521 28.7854 30.0034 29.1789 29.9999C29.5724 29.9965 29.9488 29.8387 30.2271 29.5605C30.5054 29.2824 30.6632 28.906 30.6666 28.5126C30.67 28.1192 30.5188 27.7402 30.2454 27.4572L22.2638 19.478C24.1524 17.0551 25.0452 14.0032 24.7603 10.9448C24.4754 7.8864 23.0342 5.05182 20.7307 3.01916C18.4271 0.986497 15.4347 -0.0911313 12.3637 0.00604413C9.29268 0.10322 6.37441 1.36788 4.20404 3.54211C3.0826 4.66265 2.19299 5.99311 1.58604 7.45746C0.979087 8.92182 0.666687 10.4914 0.666687 12.0765C0.666687 13.6616 0.979087 15.2311 1.58604 16.6955C2.19299 18.1598 3.0826 19.4903 4.20404 20.6108ZM6.32625 5.6667C7.80996 4.18346 9.76219 3.26039 11.8503 3.05477C13.9385 2.84914 16.0334 3.37368 17.778 4.53902C19.5227 5.70435 20.8092 7.43838 21.4184 9.44567C22.0276 11.453 21.9218 13.6093 21.1189 15.5473C20.3161 17.4853 18.8659 19.0851 17.0155 20.0741C15.1651 21.0631 13.029 21.3801 10.971 20.9711C8.913 20.5621 7.06054 19.4524 5.72921 17.8311C4.39788 16.2097 3.67005 14.1771 3.66974 12.0795C3.66562 10.8875 3.89833 9.70658 4.35435 8.60523C4.81038 7.50388 5.48064 6.50403 6.32625 5.66369V5.6667Z"/>
+                            </svg>
+                            <h3 class="stages__title color--main">Диагностика стиральной машины</h3>
+                        </div>
+                        <p class="stages__descr color--light-black medium">
+                            После проведения диагностики, мастер называет стоимость ремонта и срок выполнения работ.
+                        </p>
+                    </div>
+                    <div class="stages__block bg--white shadow grid">
+                        <div class="stages__top flex">
+                            <svg viewBox="0 0 31 30" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M29.5565 20.3631L22.7778 13.5994C22.9196 12.9086 22.99 12.205 22.9877 11.4998C22.9872 9.56609 22.4992 7.66376 21.5689 5.96861C20.6386 4.27345 19.2959 2.84018 17.6651 1.80127C16.0342 0.762363 14.1678 0.151346 12.2382 0.0247005C10.3087 -0.101945 8.37843 0.259867 6.62577 1.07669C6.40371 1.17813 6.20978 1.33224 6.0608 1.52565C5.91183 1.71905 5.81232 1.9459 5.77092 2.18649C5.72968 2.42402 5.74632 2.668 5.81942 2.89774C5.89252 3.12748 6.01993 3.33621 6.19085 3.50624L12.7146 10.015L10.0151 12.7145L3.50635 6.19074C3.33488 6.02248 3.1255 5.89787 2.89583 5.8274C2.66616 5.75693 2.42292 5.74267 2.18659 5.78582C1.94751 5.8257 1.72166 5.92294 1.52838 6.06921C1.33509 6.21547 1.18015 6.40641 1.0768 6.62566C0.25724 8.38409 -0.104258 10.3212 0.025933 12.2569C0.156124 14.1926 0.773775 16.0639 1.82143 17.6967C2.86908 19.3296 4.3127 20.6709 6.01799 21.596C7.72328 22.521 9.63484 22.9998 11.5748 22.9876C12.2801 22.9899 12.9836 22.9195 13.6745 22.7776L20.4382 29.5564C20.5776 29.6969 20.7435 29.8085 20.9262 29.8847C21.109 29.9608 21.305 30 21.503 30C21.701 30 21.897 29.9608 22.0798 29.8847C22.2625 29.8085 22.4284 29.6969 22.5678 29.5564C22.7084 29.417 22.8199 29.2511 22.8961 29.0683C22.9722 28.8856 23.0114 28.6896 23.0114 28.4916C23.0114 28.2936 22.9722 28.0976 22.8961 27.9148C22.8199 27.7321 22.7084 27.5662 22.5678 27.4268L15.2192 20.0782C15.0355 19.8957 14.8078 19.7639 14.5581 19.6956C14.3085 19.6273 14.0454 19.6247 13.7944 19.6882C13.0703 19.8821 12.3244 19.9829 11.5748 19.9882C10.4531 19.9981 9.34053 19.7859 8.30116 19.3639C7.26179 18.942 6.31618 18.3185 5.51881 17.5295C4.72143 16.7405 4.08805 15.8015 3.65515 14.7667C3.22224 13.7318 2.99838 12.6215 2.99644 11.4998C2.9945 10.9974 3.03463 10.4957 3.11642 10L8.99532 15.8939C9.13474 16.0345 9.30061 16.1461 9.48337 16.2222C9.66612 16.2983 9.86214 16.3375 10.0601 16.3375C10.2581 16.3375 10.4541 16.2983 10.6369 16.2222C10.8196 16.1461 10.9855 16.0345 11.1249 15.8939L15.894 11.0798C16.1643 10.8002 16.3154 10.4265 16.3154 10.0375C16.3154 9.64859 16.1643 9.27487 15.894 8.99522L10.0601 3.11631C10.5559 3.03535 11.0575 2.99522 11.5598 2.99634C13.8125 3.00031 15.9715 3.89796 17.563 5.49223C19.1544 7.08649 20.0483 9.2471 20.0483 11.4998C20.043 12.2494 19.9422 12.9952 19.7483 13.7193C19.6848 13.9703 19.6874 14.2334 19.7557 14.483C19.824 14.7327 19.9558 14.9604 20.1382 15.1441L27.4869 22.4927C27.7693 22.7751 28.1523 22.9338 28.5517 22.9338C28.9511 22.9338 29.3341 22.7751 29.6165 22.4927C29.8989 22.2103 30.0575 21.8273 30.0575 21.4279C30.0575 21.0285 29.8989 20.6455 29.6165 20.3631H29.5565Z"/>
+                            </svg>
+                            <h3 class="stages__title color--main">Проведение ремонта</h3>
+                        </div>
+                        <p class="stages__descr color--light-black medium">
+                            Мастер производит все работы у вас дома.
+                        </p>
+                    </div>
+                    <div class="stages__block bg--white shadow grid">
+                        <div class="stages__top flex">
+                            <svg viewBox="0 0 31 30" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M27.0958 22.1625H24.8271C24.1896 22.1625 23.6708 21.6438 23.6708 21.0063V13.0188C23.6708 12.3813 24.1896 11.8625 24.8271 11.8625H27.0958C28.7208 11.8625 30.0458 13.1875 30.0458 14.8125V19.2125C30.0396 20.8375 28.7208 22.1625 27.0958 22.1625ZM25.9771 19.8563H27.0958C27.4521 19.8563 27.7396 19.5688 27.7396 19.2188V14.8125C27.7396 14.4563 27.4521 14.175 27.0958 14.175H25.9771V19.8563ZM5.55834 22.1625H3.28334C1.65834 22.1625 0.333344 20.8375 0.333344 19.2125V14.8125C0.333344 13.1875 1.65834 11.8625 3.28334 11.8625H5.55209C6.18959 11.8625 6.70834 12.3813 6.70834 13.0188V21.0125C6.70834 21.6437 6.19584 22.1625 5.55834 22.1625ZM3.28334 14.1687C2.92709 14.1687 2.63959 14.4563 2.63959 14.8063V19.2062C2.63959 19.5625 2.92709 19.8438 3.28334 19.8438H4.40209V14.1625H3.28334V14.1687Z"/>
+                                <path d="M26.4771 14.1687C25.8396 14.1687 25.3208 13.65 25.3208 13.0125V12.15C25.3208 6.71875 20.9021 2.3 15.4708 2.3H14.9021C9.46459 2.3 5.04584 6.71875 5.04584 12.15V13.0125C5.04584 13.65 4.52709 14.1687 3.88959 14.1687C3.25209 14.1687 2.73334 13.65 2.73334 13.0125V12.15C2.74584 5.45625 8.20209 0 14.9083 0H15.4771C22.1771 0 27.6271 5.45625 27.6271 12.1562V13.0188C27.6271 13.6562 27.1146 14.1687 26.4771 14.1687ZM24.3771 28.3125H19.3583C18.7208 28.3125 18.2021 27.7938 18.2021 27.1562C18.2021 26.5188 18.7208 26 19.3583 26H24.3771C25.2396 26 25.9396 25.3 25.9396 24.4438V21.0063C25.9396 20.3687 26.4583 19.85 27.0958 19.85C27.7333 19.85 28.2521 20.3687 28.2521 21.0063V24.4438C28.2521 26.5813 26.5146 28.3125 24.3771 28.3125Z"/>
+                                <path d="M18.4646 30H15.3771C14.2458 30 13.3271 29.0813 13.3271 27.95V26.3812C13.3271 25.25 14.2458 24.3312 15.3771 24.3312H18.4646C19.5958 24.3312 20.5146 25.25 20.5146 26.3812V27.95C20.5146 29.0813 19.5958 30 18.4646 30ZM15.6333 27.6938H18.2083V26.6375H15.6333V27.6938Z"/>
+                            </svg>
+                            <h3 class="stages__title color--main">Контроль</h3>
+                        </div>
+                        <p class="stages__descr color--light-black medium">
+                            Через несколько дней с вами связывается менеджер отдела качества компании Сервис РСМ.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section class="about-company section grid">
+                <h2 class="section__title color--black">О компании</h2>
+                <p class="about-company__descr color--black medium">
+                    Благодаря нашему сервисному центру поломка стиральной машинки перестает быть критической проблемой. Вам достаточно перезвонить нашим менеджерам по телефону, рассказать максимально подробно о поломке, с которой вы столкнулись, и ждать приезда мастера на дом. Опытный специалист оперативно справится с проблемой, он проведет диагностику и выявит причину неправильной работы. Мы работаем в Москве уже много лет, нашими услугами и ценами довольны тысячи клиентов.
+                </p>
+            </section>
+            <section class="about-company section grid">
+                <div class="about-company__blocks grid">
+                    <form action="" class="form bg--white shadow grid">
+                        <div class="form__top grid">
+                            <h1 class="form__title color--black">Скидка 10% при заказе с сайта только сегодня!</h1>
+                            <p id="countdown" class="form__descr color--black semi-bold">
+                                До конца акции остается <span class="hours">2</span> ч. <span class="minutes">2</span> мин.
+                            </p>
+                        </div>
+                        <div class="form__bottom flex">
+                            <input type="tel" name="telephone" class="form__input input bg--light-grey color--black semi-bold" placeholder="Ваш номер телефона" required>
+                            <button type="submit" class="form__save button bg--main color--white semi-bold hover">Вызвать мастера</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+            <section class="breakdowns section grid">
+                <h2 class="section__title color--black">Основные поломки стиральных машин</h2>
+                <div class="breakdowns__blocks grid">
+                    <button class="breakdowns__block bg--white shadow grid hover" easy-add="#modal" easy-class="show">
+                        <div class="breakdowns__top flex">
+                            <img src="img/catalog/podshipnik.png" alt="" class="breakdowns__image">
+                            <h3 class="breakdowns__title color--black">Стиральная машина сильно шумит</h3>
+                        </div>
+                        <div class="breakdowns__center grid">
+                            <div class="breakdowns__reason color--black semi-bold">Причина: износ подшипников</div>
+                            <div class="breakdowns__decision color--black semi-bold">Решение: работа по замене подшипника</div>
+                        </div>
+                        <div class="breakdowns__price button bg--main-transparent color--main semi-bold hover">От 1000 ₽</div>
+                    </button>
+                    <button class="breakdowns__block bg--white shadow grid hover" easy-add="#modal" easy-class="show">
+                        <div class="breakdowns__top flex">
+                            <img src="img/catalog/nasos.png" alt="" class="breakdowns__image">
+                            <h3 class="breakdowns__title color--black">Не сливает или не отжимает</h3>
+                        </div>
+                        <div class="breakdowns__center grid">
+                            <div class="breakdowns__reason color--black semi-bold">Причина: поломка насоса</div>
+                            <div class="breakdowns__decision color--black semi-bold">Решение: работа по ремонту или замене насоса</div>
+                        </div>
+                        <div class="breakdowns__price button bg--main-transparent color--main semi-bold hover">От 300 ₽</div>
+                    </button>
+                    <button class="breakdowns__block bg--white shadow grid hover" easy-add="#modal" easy-class="show">
+                        <div class="breakdowns__top flex">
+                            <img src="img/catalog/ten.png" alt="" class="breakdowns__image">
+                            <h3 class="breakdowns__title color--black">Не греет воду</h3>
+                        </div>
+                        <div class="breakdowns__center grid">
+                            <div class="breakdowns__reason color--black semi-bold">Причина: поломка тэна</div>
+                            <div class="breakdowns__decision color--black semi-bold">Решение: работа по замене нагревательного тэна</div>
+                        </div>
+                        <div class="breakdowns__price button bg--main-transparent color--main semi-bold hover">От 500 ₽</div>
+                    </button>
+                    <button class="breakdowns__block bg--white shadow grid hover" easy-add="#modal" easy-class="show">
+                        <div class="breakdowns__top flex">
+                            <img src="img/catalog/manjeta.png" alt="" class="breakdowns__image">
+                            <h3 class="breakdowns__title color--black">Течь воды из люка</h3>
+                        </div>
+                        <div class="breakdowns__center grid">
+                            <div class="breakdowns__reason color--black semi-bold">Причина: износ манжеты</div>
+                            <div class="breakdowns__decision color--black semi-bold">Решение: работа по замене резинки уплотнителя</div>
+                        </div>
+                        <div class="breakdowns__price button bg--main-transparent color--main semi-bold hover">От 550 ₽</div>
+                    </button>
+                    <button class="breakdowns__block bg--white shadow grid hover" easy-add="#modal" easy-class="show">
+                        <div class="breakdowns__top flex">
+                            <img src="img/catalog/armotizator.png" alt="" class="breakdowns__image">
+                            <h3 class="breakdowns__title color--black">Вибрация при отжиме</h3>
+                        </div>
+                        <div class="breakdowns__center grid">
+                            <div class="breakdowns__reason color--black semi-bold">Причина: поломка амортизаторов</div>
+                            <div class="breakdowns__decision color--black semi-bold">Решение: работа по замене амортизаторов</div>
+                        </div>
+                        <div class="breakdowns__price button bg--main-transparent color--main semi-bold hover">От 500 ₽</div>
+                    </button>
+                    <button class="breakdowns__block bg--white shadow grid hover" easy-add="#modal" easy-class="show">
+                        <div class="breakdowns__top flex">
+                            <img src="img/catalog/zamok.png" alt="" class="breakdowns__image">
+                            <h3 class="breakdowns__title color--black">Не открывается люк</h3>
+                        </div>
+                        <div class="breakdowns__center grid">
+                            <div class="breakdowns__reason color--black semi-bold">Причина: поломка блокировки люка</div>
+                            <div class="breakdowns__decision color--black semi-bold">Решение: проведение работ по разблокировке</div>
+                        </div>
+                        <div class="breakdowns__price button bg--main-transparent color--main semi-bold hover">От 400 ₽</div>
+                    </button>
+                    <button class="breakdowns__block bg--white shadow grid hover" easy-add="#modal" easy-class="show">
+                        <div class="breakdowns__top flex">
+                            <img src="img/catalog/upravlyaushiy-module.png" alt="" class="breakdowns__image">
+                            <h3 class="breakdowns__title color--black">Стиральная машина не включается</h3>
+                        </div>
+                        <div class="breakdowns__center grid">
+                            <div class="breakdowns__reason color--black semi-bold">Причина: поломка управляющего модуля</div>
+                            <div class="breakdowns__decision color--black semi-bold">Решение: работы с блоком управления и электрической цепью питания</div>
+                        </div>
+                        <div class="breakdowns__price button bg--main-transparent color--main semi-bold hover">От 250 ₽</div>
+                    </button>
+                    <button class="breakdowns__block bg--white shadow grid hover" easy-add="#modal" easy-class="show">
+                        <div class="breakdowns__top flex">
+                            <img src="img/catalog/remen.png" alt="" class="breakdowns__image">
+                            <h3 class="breakdowns__title color--black">Не крутится барабан</h3>
+                        </div>
+                        <div class="breakdowns__center grid">
+                            <div class="breakdowns__reason color--black semi-bold">Причина: поломка приводного ремня</div>
+                            <div class="breakdowns__decision color--black semi-bold">Решение: проведение работ по замене ремня</div>
+                        </div>
+                        <div class="breakdowns__price button bg--main-transparent color--main semi-bold hover">От 320 ₽</div>
+                    </button>
+                    <button class="breakdowns__block bg--white shadow grid hover" easy-add="#modal" easy-class="show">
+                        <div class="breakdowns__top flex">
+                            <img src="img/catalog/dvigatel.png" alt="" class="breakdowns__image">
+                            <h3 class="breakdowns__title color--black">Искрит и запах гари</h3>
+                        </div>
+                        <div class="breakdowns__center grid">
+                            <div class="breakdowns__reason color--black semi-bold">Причина: поломка двигателя</div>
+                            <div class="breakdowns__decision color--black semi-bold">Решение: работы по ремонту или замене двигателя</div>
+                        </div>
+                        <div class="breakdowns__price button bg--main-transparent color--main semi-bold hover">От 700 ₽</div>
+                    </button>
+                    <button class="breakdowns__block bg--white shadow grid hover" easy-add="#modal" easy-class="show">
+                        <div class="breakdowns__top flex">
+                            <img src="img/catalog/klapan.png" alt="" class="breakdowns__image">
+                            <h3 class="breakdowns__title color--black">Не набирает воду</h3>
+                        </div>
+                        <div class="breakdowns__center grid">
+                            <div class="breakdowns__reason color--black semi-bold">Причина: поломка впускного клапана</div>
+                            <div class="breakdowns__decision color--black semi-bold">Решение: работы по замене электромагнитного клапана</div>
+                        </div>
+                        <div class="breakdowns__price button bg--main-transparent color--main semi-bold hover">От 800 ₽</div>
+                    </button>
+                </div>
+            </section>
+            <section class="reviews section grid">
+                <h2 class="section__title color--black">Отзывы</h2>
+                <div class="reviews__blocks grid">
+                    <div class="reviews__prev bg--light-grey hover">
+                        <svg class="hover" viewBox="0 0 12 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M11.6002 19.7075C11.1584 20.0975 10.4438 20.0975 10.0031 19.7075L0.661819 11.4439C0.452717 11.2618 0.286218 11.0425 0.172444 10.7996C0.058671 10.5566 0 10.2949 0 10.0305C0 9.76609 0.058671 9.50443 0.172444 9.26145C0.286218 9.01846 0.452717 8.79923 0.661819 8.61707L10.0707 0.292494C10.2843 0.106451 10.5671 0.00188239 10.8617 2.51676e-05C11.1563 -0.00183205 11.4406 0.0991613 11.6569 0.282495C11.7641 0.37303 11.8498 0.482766 11.9088 0.604907C11.9678 0.727049 11.9988 0.858994 12 0.992574C12.0011 1.12615 11.9723 1.25852 11.9153 1.38148C11.8584 1.50445 11.7745 1.61538 11.6689 1.70742L3.05741 9.32404C2.95278 9.41512 2.86945 9.52477 2.81252 9.64631C2.75558 9.76785 2.72622 9.89873 2.72622 10.031C2.72622 10.1633 2.75558 10.2942 2.81252 10.4157C2.86945 10.5372 2.95278 10.6469 3.05741 10.738L11.6002 18.2946C11.7048 18.3856 11.7881 18.4951 11.845 18.6166C11.9019 18.7381 11.9313 18.8689 11.9313 19.0011C11.9313 19.1332 11.9019 19.264 11.845 19.3855C11.7881 19.507 11.7048 19.6165 11.6002 19.7075Z"/>
+                        </svg>
+                    </div>
+                    <div class="reviews__swiper swiper">
+                        <div class="reviews__swiper-wrapper swiper-wrapper">
+                            <div class="reviews__slide swiper-slide bg--light-grey grid">
+                                <div class="reviews__top flex">
+                                    <div class="reviews__avatar" style="background-image: url(img/reviews/avatar-1.png);"></div>
+                                    <div class="reviews__info grid">
+                                        <h3 class="reviews__name color--black">Лидия Петровна</h3>
+                                        <div class="reviews__position flex">
+                                            <svg viewBox="0 0 16 19" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M7.96912 11.1097C7.30854 11.1097 6.6628 10.9169 6.11356 10.5556C5.56431 10.1944 5.13622 9.68099 4.88343 9.0803C4.63064 8.4796 4.5645 7.81862 4.69337 7.18092C4.82224 6.54323 5.14034 5.95747 5.60743 5.49772C6.07453 5.03797 6.66965 4.72487 7.31753 4.59803C7.96541 4.47118 8.63696 4.53628 9.24725 4.7851C9.85754 5.03392 10.3792 5.45527 10.7462 5.99588C11.1132 6.53649 11.309 7.17208 11.309 7.82226C11.2893 7.9837 11.2102 8.13244 11.0866 8.24034C10.963 8.34824 10.8036 8.40782 10.6384 8.40782C10.4732 8.40782 10.3137 8.34824 10.1901 8.24034C10.0665 8.13244 9.98738 7.9837 9.96767 7.82226C9.96824 7.43308 9.85152 7.05248 9.63226 6.72861C9.41301 6.40475 9.10108 6.15217 8.73594 6.00285C8.3708 5.85353 7.96887 5.81416 7.581 5.88974C7.19313 5.96532 6.83675 6.15245 6.55696 6.42744C6.27716 6.70243 6.08653 7.05294 6.00918 7.4346C5.93183 7.81626 5.97124 8.21193 6.12242 8.57154C6.2736 8.93115 6.52976 9.23854 6.85848 9.45482C7.18721 9.67109 7.57372 9.78653 7.96912 9.78653C8.06367 9.77593 8.15943 9.78511 8.25012 9.81347C8.34082 9.84183 8.42441 9.88873 8.4954 9.9511C8.5664 10.0135 8.62321 10.0899 8.6621 10.1754C8.701 10.2609 8.7211 10.3535 8.7211 10.4471C8.7211 10.5408 8.701 10.6334 8.6621 10.7189C8.62321 10.8044 8.5664 10.8808 8.4954 10.9432C8.42441 11.0056 8.34082 11.0525 8.25012 11.0808C8.15943 11.1092 8.06367 11.1184 7.96912 11.1078V11.1097Z"/>
+                                                <path d="M8 19C7.73266 18.9996 7.46854 18.9425 7.2256 18.8327C6.98265 18.7229 6.76657 18.5629 6.59204 18.3636L1.92618 12.9989C0.930412 11.8555 0.288636 10.4551 0.0769469 8.96364C-0.134743 7.47218 0.0925335 5.95225 0.731827 4.58406C1.37112 3.21587 2.39562 2.05682 3.68384 1.24433C4.97207 0.431846 6.46999 0 8 0C9.53001 0 11.0279 0.431846 12.3162 1.24433C13.6044 2.05682 14.6289 3.21587 15.2682 4.58406C15.9075 5.95225 16.1347 7.47218 15.9231 8.96364C15.7114 10.4551 15.0696 11.8555 14.0738 12.9989L12.1785 15.1683C12.1252 15.2461 12.0558 15.3118 11.9748 15.3613C11.8938 15.4107 11.8031 15.4428 11.7087 15.4553C11.6143 15.4678 11.5182 15.4605 11.4268 15.4338C11.3355 15.4072 11.2509 15.3618 11.1786 15.3007C11.1063 15.2396 11.0479 15.1641 11.0074 15.0793C10.9668 14.9944 10.945 14.902 10.9433 14.8083C10.9415 14.7145 10.96 14.6214 10.9974 14.5351C11.0349 14.4489 11.0904 14.3714 11.1604 14.3078L13.0557 12.1383C13.8837 11.1864 14.4171 10.0209 14.5926 8.77975C14.7682 7.53863 14.5785 6.27399 14.0462 5.13569C13.5139 3.9974 12.6612 3.03317 11.5892 2.35727C10.5171 1.68136 9.2707 1.32213 7.99759 1.32213C6.72447 1.32213 5.47805 1.68136 4.40601 2.35727C3.33398 3.03317 2.48128 3.9974 1.94896 5.13569C1.41664 6.27399 1.22702 7.53863 1.40257 8.77975C1.57812 10.0209 2.11148 11.1864 2.93945 12.1383L7.61399 17.5059C7.6567 17.5558 7.70897 17.5969 7.76782 17.6269C7.82668 17.6569 7.89096 17.6753 7.95701 17.6808C8.02305 17.6864 8.08956 17.6791 8.15274 17.6593C8.21591 17.6396 8.27452 17.6078 8.32521 17.5657C8.34736 17.5477 8.36772 17.5277 8.38601 17.5059L8.96502 16.841C9.01852 16.7637 9.08799 16.6984 9.16889 16.6493C9.24979 16.6003 9.34029 16.5686 9.43449 16.5563C9.52868 16.544 9.62445 16.5514 9.71554 16.578C9.80663 16.6047 9.89099 16.6499 9.96311 16.7108C10.0352 16.7717 10.0935 16.8469 10.1341 16.9314C10.1746 17.016 10.1966 17.1081 10.1986 17.2016C10.2006 17.2951 10.1825 17.3879 10.1455 17.4741C10.1086 17.5602 10.0536 17.6378 9.98407 17.7016L9.41086 18.3664C9.23598 18.5659 9.01936 18.7258 8.77584 18.8351C8.53232 18.9445 8.26766 19.0007 8 19Z"/>
+                                            </svg>
+                                            <span class="color--black medium">г. Москва</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="reviews__review color--black medium">
+                                    Я нечасто пишу отзывы. Если и пишу, то обычно не сразу, однако тут сдержаться не могу. Мастер прибыл точь-в-точь вовремя и поработал действительно добросовестно. Он быстро отремонтировал мне стиральную машину, при расчёте даже дал скидку, поскольку я на пенсии. Выражаю огромную благодарность.
+                                </p>
+                            </div>
+                            <div class="reviews__slide swiper-slide bg--light-grey grid">
+                                <div class="reviews__top flex">
+                                    <div class="reviews__avatar" style="background-image: url(img/reviews/avatar-2.png);"></div>
+                                    <div class="reviews__info grid">
+                                        <h3 class="reviews__name color--black">Ольга Анатольевна</h3>
+                                        <div class="reviews__position flex">
+                                            <svg viewBox="0 0 16 19" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M7.96912 11.1097C7.30854 11.1097 6.6628 10.9169 6.11356 10.5556C5.56431 10.1944 5.13622 9.68099 4.88343 9.0803C4.63064 8.4796 4.5645 7.81862 4.69337 7.18092C4.82224 6.54323 5.14034 5.95747 5.60743 5.49772C6.07453 5.03797 6.66965 4.72487 7.31753 4.59803C7.96541 4.47118 8.63696 4.53628 9.24725 4.7851C9.85754 5.03392 10.3792 5.45527 10.7462 5.99588C11.1132 6.53649 11.309 7.17208 11.309 7.82226C11.2893 7.9837 11.2102 8.13244 11.0866 8.24034C10.963 8.34824 10.8036 8.40782 10.6384 8.40782C10.4732 8.40782 10.3137 8.34824 10.1901 8.24034C10.0665 8.13244 9.98738 7.9837 9.96767 7.82226C9.96824 7.43308 9.85152 7.05248 9.63226 6.72861C9.41301 6.40475 9.10108 6.15217 8.73594 6.00285C8.3708 5.85353 7.96887 5.81416 7.581 5.88974C7.19313 5.96532 6.83675 6.15245 6.55696 6.42744C6.27716 6.70243 6.08653 7.05294 6.00918 7.4346C5.93183 7.81626 5.97124 8.21193 6.12242 8.57154C6.2736 8.93115 6.52976 9.23854 6.85848 9.45482C7.18721 9.67109 7.57372 9.78653 7.96912 9.78653C8.06367 9.77593 8.15943 9.78511 8.25012 9.81347C8.34082 9.84183 8.42441 9.88873 8.4954 9.9511C8.5664 10.0135 8.62321 10.0899 8.6621 10.1754C8.701 10.2609 8.7211 10.3535 8.7211 10.4471C8.7211 10.5408 8.701 10.6334 8.6621 10.7189C8.62321 10.8044 8.5664 10.8808 8.4954 10.9432C8.42441 11.0056 8.34082 11.0525 8.25012 11.0808C8.15943 11.1092 8.06367 11.1184 7.96912 11.1078V11.1097Z"/>
+                                                <path d="M8 19C7.73266 18.9996 7.46854 18.9425 7.2256 18.8327C6.98265 18.7229 6.76657 18.5629 6.59204 18.3636L1.92618 12.9989C0.930412 11.8555 0.288636 10.4551 0.0769469 8.96364C-0.134743 7.47218 0.0925335 5.95225 0.731827 4.58406C1.37112 3.21587 2.39562 2.05682 3.68384 1.24433C4.97207 0.431846 6.46999 0 8 0C9.53001 0 11.0279 0.431846 12.3162 1.24433C13.6044 2.05682 14.6289 3.21587 15.2682 4.58406C15.9075 5.95225 16.1347 7.47218 15.9231 8.96364C15.7114 10.4551 15.0696 11.8555 14.0738 12.9989L12.1785 15.1683C12.1252 15.2461 12.0558 15.3118 11.9748 15.3613C11.8938 15.4107 11.8031 15.4428 11.7087 15.4553C11.6143 15.4678 11.5182 15.4605 11.4268 15.4338C11.3355 15.4072 11.2509 15.3618 11.1786 15.3007C11.1063 15.2396 11.0479 15.1641 11.0074 15.0793C10.9668 14.9944 10.945 14.902 10.9433 14.8083C10.9415 14.7145 10.96 14.6214 10.9974 14.5351C11.0349 14.4489 11.0904 14.3714 11.1604 14.3078L13.0557 12.1383C13.8837 11.1864 14.4171 10.0209 14.5926 8.77975C14.7682 7.53863 14.5785 6.27399 14.0462 5.13569C13.5139 3.9974 12.6612 3.03317 11.5892 2.35727C10.5171 1.68136 9.2707 1.32213 7.99759 1.32213C6.72447 1.32213 5.47805 1.68136 4.40601 2.35727C3.33398 3.03317 2.48128 3.9974 1.94896 5.13569C1.41664 6.27399 1.22702 7.53863 1.40257 8.77975C1.57812 10.0209 2.11148 11.1864 2.93945 12.1383L7.61399 17.5059C7.6567 17.5558 7.70897 17.5969 7.76782 17.6269C7.82668 17.6569 7.89096 17.6753 7.95701 17.6808C8.02305 17.6864 8.08956 17.6791 8.15274 17.6593C8.21591 17.6396 8.27452 17.6078 8.32521 17.5657C8.34736 17.5477 8.36772 17.5277 8.38601 17.5059L8.96502 16.841C9.01852 16.7637 9.08799 16.6984 9.16889 16.6493C9.24979 16.6003 9.34029 16.5686 9.43449 16.5563C9.52868 16.544 9.62445 16.5514 9.71554 16.578C9.80663 16.6047 9.89099 16.6499 9.96311 16.7108C10.0352 16.7717 10.0935 16.8469 10.1341 16.9314C10.1746 17.016 10.1966 17.1081 10.1986 17.2016C10.2006 17.2951 10.1825 17.3879 10.1455 17.4741C10.1086 17.5602 10.0536 17.6378 9.98407 17.7016L9.41086 18.3664C9.23598 18.5659 9.01936 18.7258 8.77584 18.8351C8.53232 18.9445 8.26766 19.0007 8 19Z"/>
+                                            </svg>
+                                            <span class="color--black medium">г. Митино</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="reviews__review color--black medium">
+                                    У меня ремонтировали стиральную машину. Мастер выполнил замену шлангов и всего необходимого. На работу ушёл максимум час. Профессионализм явно имеется. Машина теперь работает, словно только что куплена. Огромное спасибо.
+                                </p>
+                            </div>
+                            <div class="reviews__slide swiper-slide bg--light-grey grid">
+                                <div class="reviews__top flex">
+                                    <div class="reviews__avatar" style="background-image: url(img/reviews/avatar-3.png);"></div>
+                                    <div class="reviews__info grid">
+                                        <h3 class="reviews__name color--black">Николай Иванович</h3>
+                                        <div class="reviews__position flex">
+                                            <svg viewBox="0 0 16 19" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M7.96912 11.1097C7.30854 11.1097 6.6628 10.9169 6.11356 10.5556C5.56431 10.1944 5.13622 9.68099 4.88343 9.0803C4.63064 8.4796 4.5645 7.81862 4.69337 7.18092C4.82224 6.54323 5.14034 5.95747 5.60743 5.49772C6.07453 5.03797 6.66965 4.72487 7.31753 4.59803C7.96541 4.47118 8.63696 4.53628 9.24725 4.7851C9.85754 5.03392 10.3792 5.45527 10.7462 5.99588C11.1132 6.53649 11.309 7.17208 11.309 7.82226C11.2893 7.9837 11.2102 8.13244 11.0866 8.24034C10.963 8.34824 10.8036 8.40782 10.6384 8.40782C10.4732 8.40782 10.3137 8.34824 10.1901 8.24034C10.0665 8.13244 9.98738 7.9837 9.96767 7.82226C9.96824 7.43308 9.85152 7.05248 9.63226 6.72861C9.41301 6.40475 9.10108 6.15217 8.73594 6.00285C8.3708 5.85353 7.96887 5.81416 7.581 5.88974C7.19313 5.96532 6.83675 6.15245 6.55696 6.42744C6.27716 6.70243 6.08653 7.05294 6.00918 7.4346C5.93183 7.81626 5.97124 8.21193 6.12242 8.57154C6.2736 8.93115 6.52976 9.23854 6.85848 9.45482C7.18721 9.67109 7.57372 9.78653 7.96912 9.78653C8.06367 9.77593 8.15943 9.78511 8.25012 9.81347C8.34082 9.84183 8.42441 9.88873 8.4954 9.9511C8.5664 10.0135 8.62321 10.0899 8.6621 10.1754C8.701 10.2609 8.7211 10.3535 8.7211 10.4471C8.7211 10.5408 8.701 10.6334 8.6621 10.7189C8.62321 10.8044 8.5664 10.8808 8.4954 10.9432C8.42441 11.0056 8.34082 11.0525 8.25012 11.0808C8.15943 11.1092 8.06367 11.1184 7.96912 11.1078V11.1097Z"/>
+                                                <path d="M8 19C7.73266 18.9996 7.46854 18.9425 7.2256 18.8327C6.98265 18.7229 6.76657 18.5629 6.59204 18.3636L1.92618 12.9989C0.930412 11.8555 0.288636 10.4551 0.0769469 8.96364C-0.134743 7.47218 0.0925335 5.95225 0.731827 4.58406C1.37112 3.21587 2.39562 2.05682 3.68384 1.24433C4.97207 0.431846 6.46999 0 8 0C9.53001 0 11.0279 0.431846 12.3162 1.24433C13.6044 2.05682 14.6289 3.21587 15.2682 4.58406C15.9075 5.95225 16.1347 7.47218 15.9231 8.96364C15.7114 10.4551 15.0696 11.8555 14.0738 12.9989L12.1785 15.1683C12.1252 15.2461 12.0558 15.3118 11.9748 15.3613C11.8938 15.4107 11.8031 15.4428 11.7087 15.4553C11.6143 15.4678 11.5182 15.4605 11.4268 15.4338C11.3355 15.4072 11.2509 15.3618 11.1786 15.3007C11.1063 15.2396 11.0479 15.1641 11.0074 15.0793C10.9668 14.9944 10.945 14.902 10.9433 14.8083C10.9415 14.7145 10.96 14.6214 10.9974 14.5351C11.0349 14.4489 11.0904 14.3714 11.1604 14.3078L13.0557 12.1383C13.8837 11.1864 14.4171 10.0209 14.5926 8.77975C14.7682 7.53863 14.5785 6.27399 14.0462 5.13569C13.5139 3.9974 12.6612 3.03317 11.5892 2.35727C10.5171 1.68136 9.2707 1.32213 7.99759 1.32213C6.72447 1.32213 5.47805 1.68136 4.40601 2.35727C3.33398 3.03317 2.48128 3.9974 1.94896 5.13569C1.41664 6.27399 1.22702 7.53863 1.40257 8.77975C1.57812 10.0209 2.11148 11.1864 2.93945 12.1383L7.61399 17.5059C7.6567 17.5558 7.70897 17.5969 7.76782 17.6269C7.82668 17.6569 7.89096 17.6753 7.95701 17.6808C8.02305 17.6864 8.08956 17.6791 8.15274 17.6593C8.21591 17.6396 8.27452 17.6078 8.32521 17.5657C8.34736 17.5477 8.36772 17.5277 8.38601 17.5059L8.96502 16.841C9.01852 16.7637 9.08799 16.6984 9.16889 16.6493C9.24979 16.6003 9.34029 16.5686 9.43449 16.5563C9.52868 16.544 9.62445 16.5514 9.71554 16.578C9.80663 16.6047 9.89099 16.6499 9.96311 16.7108C10.0352 16.7717 10.0935 16.8469 10.1341 16.9314C10.1746 17.016 10.1966 17.1081 10.1986 17.2016C10.2006 17.2951 10.1825 17.3879 10.1455 17.4741C10.1086 17.5602 10.0536 17.6378 9.98407 17.7016L9.41086 18.3664C9.23598 18.5659 9.01936 18.7258 8.77584 18.8351C8.53232 18.9445 8.26766 19.0007 8 19Z"/>
+                                            </svg>
+                                            <span class="color--black medium">г. Кузьминки</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="reviews__review color--black medium">
+                                    У меня ремонтировали стиральную машину. Мастер выполнил замену шлангов и всего необходимого. На работу ушёл максимум час. Профессионализм явно имеется. Машина теперь работает, словно только что куплена. Огромное спасибо.
+                                </p>
+                            </div>
+                            <div class="reviews__slide swiper-slide bg--light-grey grid">
+                                <div class="reviews__top flex">
+                                    <div class="reviews__avatar" style="background-image: url(img/reviews/avatar-4.png);"></div>
+                                    <div class="reviews__info grid">
+                                        <h3 class="reviews__name color--black">Наталья Сергеевна</h3>
+                                        <div class="reviews__position flex">
+                                            <svg viewBox="0 0 16 19" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M7.96912 11.1097C7.30854 11.1097 6.6628 10.9169 6.11356 10.5556C5.56431 10.1944 5.13622 9.68099 4.88343 9.0803C4.63064 8.4796 4.5645 7.81862 4.69337 7.18092C4.82224 6.54323 5.14034 5.95747 5.60743 5.49772C6.07453 5.03797 6.66965 4.72487 7.31753 4.59803C7.96541 4.47118 8.63696 4.53628 9.24725 4.7851C9.85754 5.03392 10.3792 5.45527 10.7462 5.99588C11.1132 6.53649 11.309 7.17208 11.309 7.82226C11.2893 7.9837 11.2102 8.13244 11.0866 8.24034C10.963 8.34824 10.8036 8.40782 10.6384 8.40782C10.4732 8.40782 10.3137 8.34824 10.1901 8.24034C10.0665 8.13244 9.98738 7.9837 9.96767 7.82226C9.96824 7.43308 9.85152 7.05248 9.63226 6.72861C9.41301 6.40475 9.10108 6.15217 8.73594 6.00285C8.3708 5.85353 7.96887 5.81416 7.581 5.88974C7.19313 5.96532 6.83675 6.15245 6.55696 6.42744C6.27716 6.70243 6.08653 7.05294 6.00918 7.4346C5.93183 7.81626 5.97124 8.21193 6.12242 8.57154C6.2736 8.93115 6.52976 9.23854 6.85848 9.45482C7.18721 9.67109 7.57372 9.78653 7.96912 9.78653C8.06367 9.77593 8.15943 9.78511 8.25012 9.81347C8.34082 9.84183 8.42441 9.88873 8.4954 9.9511C8.5664 10.0135 8.62321 10.0899 8.6621 10.1754C8.701 10.2609 8.7211 10.3535 8.7211 10.4471C8.7211 10.5408 8.701 10.6334 8.6621 10.7189C8.62321 10.8044 8.5664 10.8808 8.4954 10.9432C8.42441 11.0056 8.34082 11.0525 8.25012 11.0808C8.15943 11.1092 8.06367 11.1184 7.96912 11.1078V11.1097Z"/>
+                                                <path d="M8 19C7.73266 18.9996 7.46854 18.9425 7.2256 18.8327C6.98265 18.7229 6.76657 18.5629 6.59204 18.3636L1.92618 12.9989C0.930412 11.8555 0.288636 10.4551 0.0769469 8.96364C-0.134743 7.47218 0.0925335 5.95225 0.731827 4.58406C1.37112 3.21587 2.39562 2.05682 3.68384 1.24433C4.97207 0.431846 6.46999 0 8 0C9.53001 0 11.0279 0.431846 12.3162 1.24433C13.6044 2.05682 14.6289 3.21587 15.2682 4.58406C15.9075 5.95225 16.1347 7.47218 15.9231 8.96364C15.7114 10.4551 15.0696 11.8555 14.0738 12.9989L12.1785 15.1683C12.1252 15.2461 12.0558 15.3118 11.9748 15.3613C11.8938 15.4107 11.8031 15.4428 11.7087 15.4553C11.6143 15.4678 11.5182 15.4605 11.4268 15.4338C11.3355 15.4072 11.2509 15.3618 11.1786 15.3007C11.1063 15.2396 11.0479 15.1641 11.0074 15.0793C10.9668 14.9944 10.945 14.902 10.9433 14.8083C10.9415 14.7145 10.96 14.6214 10.9974 14.5351C11.0349 14.4489 11.0904 14.3714 11.1604 14.3078L13.0557 12.1383C13.8837 11.1864 14.4171 10.0209 14.5926 8.77975C14.7682 7.53863 14.5785 6.27399 14.0462 5.13569C13.5139 3.9974 12.6612 3.03317 11.5892 2.35727C10.5171 1.68136 9.2707 1.32213 7.99759 1.32213C6.72447 1.32213 5.47805 1.68136 4.40601 2.35727C3.33398 3.03317 2.48128 3.9974 1.94896 5.13569C1.41664 6.27399 1.22702 7.53863 1.40257 8.77975C1.57812 10.0209 2.11148 11.1864 2.93945 12.1383L7.61399 17.5059C7.6567 17.5558 7.70897 17.5969 7.76782 17.6269C7.82668 17.6569 7.89096 17.6753 7.95701 17.6808C8.02305 17.6864 8.08956 17.6791 8.15274 17.6593C8.21591 17.6396 8.27452 17.6078 8.32521 17.5657C8.34736 17.5477 8.36772 17.5277 8.38601 17.5059L8.96502 16.841C9.01852 16.7637 9.08799 16.6984 9.16889 16.6493C9.24979 16.6003 9.34029 16.5686 9.43449 16.5563C9.52868 16.544 9.62445 16.5514 9.71554 16.578C9.80663 16.6047 9.89099 16.6499 9.96311 16.7108C10.0352 16.7717 10.0935 16.8469 10.1341 16.9314C10.1746 17.016 10.1966 17.1081 10.1986 17.2016C10.2006 17.2951 10.1825 17.3879 10.1455 17.4741C10.1086 17.5602 10.0536 17.6378 9.98407 17.7016L9.41086 18.3664C9.23598 18.5659 9.01936 18.7258 8.77584 18.8351C8.53232 18.9445 8.26766 19.0007 8 19Z"/>
+                                            </svg>
+                                            <span class="color--black medium">г. Бутово</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="reviews__review color--black medium">
+                                    Мне отремонтировали стиральную машину, у которой сломался барабан, чрезвычайно благодарна за то, что его привели в рабочее состояние прямо в день моего обращения. Спасибо, что так быстро сделали всё, профессионально, предоставив гарантию и довольно недорого!
+                                </p>
+                            </div>
+                            <div class="reviews__slide swiper-slide bg--light-grey grid">
+                                <div class="reviews__top flex">
+                                    <div class="reviews__avatar" style="background-image: url(img/reviews/avatar-5.png);"></div>
+                                    <div class="reviews__info grid">
+                                        <h3 class="reviews__name color--black">Екатерина Александровна</h3>
+                                        <div class="reviews__position flex">
+                                            <svg viewBox="0 0 16 19" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M7.96912 11.1097C7.30854 11.1097 6.6628 10.9169 6.11356 10.5556C5.56431 10.1944 5.13622 9.68099 4.88343 9.0803C4.63064 8.4796 4.5645 7.81862 4.69337 7.18092C4.82224 6.54323 5.14034 5.95747 5.60743 5.49772C6.07453 5.03797 6.66965 4.72487 7.31753 4.59803C7.96541 4.47118 8.63696 4.53628 9.24725 4.7851C9.85754 5.03392 10.3792 5.45527 10.7462 5.99588C11.1132 6.53649 11.309 7.17208 11.309 7.82226C11.2893 7.9837 11.2102 8.13244 11.0866 8.24034C10.963 8.34824 10.8036 8.40782 10.6384 8.40782C10.4732 8.40782 10.3137 8.34824 10.1901 8.24034C10.0665 8.13244 9.98738 7.9837 9.96767 7.82226C9.96824 7.43308 9.85152 7.05248 9.63226 6.72861C9.41301 6.40475 9.10108 6.15217 8.73594 6.00285C8.3708 5.85353 7.96887 5.81416 7.581 5.88974C7.19313 5.96532 6.83675 6.15245 6.55696 6.42744C6.27716 6.70243 6.08653 7.05294 6.00918 7.4346C5.93183 7.81626 5.97124 8.21193 6.12242 8.57154C6.2736 8.93115 6.52976 9.23854 6.85848 9.45482C7.18721 9.67109 7.57372 9.78653 7.96912 9.78653C8.06367 9.77593 8.15943 9.78511 8.25012 9.81347C8.34082 9.84183 8.42441 9.88873 8.4954 9.9511C8.5664 10.0135 8.62321 10.0899 8.6621 10.1754C8.701 10.2609 8.7211 10.3535 8.7211 10.4471C8.7211 10.5408 8.701 10.6334 8.6621 10.7189C8.62321 10.8044 8.5664 10.8808 8.4954 10.9432C8.42441 11.0056 8.34082 11.0525 8.25012 11.0808C8.15943 11.1092 8.06367 11.1184 7.96912 11.1078V11.1097Z"/>
+                                                <path d="M8 19C7.73266 18.9996 7.46854 18.9425 7.2256 18.8327C6.98265 18.7229 6.76657 18.5629 6.59204 18.3636L1.92618 12.9989C0.930412 11.8555 0.288636 10.4551 0.0769469 8.96364C-0.134743 7.47218 0.0925335 5.95225 0.731827 4.58406C1.37112 3.21587 2.39562 2.05682 3.68384 1.24433C4.97207 0.431846 6.46999 0 8 0C9.53001 0 11.0279 0.431846 12.3162 1.24433C13.6044 2.05682 14.6289 3.21587 15.2682 4.58406C15.9075 5.95225 16.1347 7.47218 15.9231 8.96364C15.7114 10.4551 15.0696 11.8555 14.0738 12.9989L12.1785 15.1683C12.1252 15.2461 12.0558 15.3118 11.9748 15.3613C11.8938 15.4107 11.8031 15.4428 11.7087 15.4553C11.6143 15.4678 11.5182 15.4605 11.4268 15.4338C11.3355 15.4072 11.2509 15.3618 11.1786 15.3007C11.1063 15.2396 11.0479 15.1641 11.0074 15.0793C10.9668 14.9944 10.945 14.902 10.9433 14.8083C10.9415 14.7145 10.96 14.6214 10.9974 14.5351C11.0349 14.4489 11.0904 14.3714 11.1604 14.3078L13.0557 12.1383C13.8837 11.1864 14.4171 10.0209 14.5926 8.77975C14.7682 7.53863 14.5785 6.27399 14.0462 5.13569C13.5139 3.9974 12.6612 3.03317 11.5892 2.35727C10.5171 1.68136 9.2707 1.32213 7.99759 1.32213C6.72447 1.32213 5.47805 1.68136 4.40601 2.35727C3.33398 3.03317 2.48128 3.9974 1.94896 5.13569C1.41664 6.27399 1.22702 7.53863 1.40257 8.77975C1.57812 10.0209 2.11148 11.1864 2.93945 12.1383L7.61399 17.5059C7.6567 17.5558 7.70897 17.5969 7.76782 17.6269C7.82668 17.6569 7.89096 17.6753 7.95701 17.6808C8.02305 17.6864 8.08956 17.6791 8.15274 17.6593C8.21591 17.6396 8.27452 17.6078 8.32521 17.5657C8.34736 17.5477 8.36772 17.5277 8.38601 17.5059L8.96502 16.841C9.01852 16.7637 9.08799 16.6984 9.16889 16.6493C9.24979 16.6003 9.34029 16.5686 9.43449 16.5563C9.52868 16.544 9.62445 16.5514 9.71554 16.578C9.80663 16.6047 9.89099 16.6499 9.96311 16.7108C10.0352 16.7717 10.0935 16.8469 10.1341 16.9314C10.1746 17.016 10.1966 17.1081 10.1986 17.2016C10.2006 17.2951 10.1825 17.3879 10.1455 17.4741C10.1086 17.5602 10.0536 17.6378 9.98407 17.7016L9.41086 18.3664C9.23598 18.5659 9.01936 18.7258 8.77584 18.8351C8.53232 18.9445 8.26766 19.0007 8 19Z"/>
+                                            </svg>
+                                            <span class="color--black medium">г. Марьино</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="reviews__review color--black medium">
+                                    Обратились за помощью к этой компании, поскольку требовался срочный ремонт стиральной машины. Мы остались очень довольны - мастера прибыли оперативно и выполнили всё хорошо, дав советы насчёт будущего использования машинки. Спасибо!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reviews__next bg--light-grey hover">
+                        <svg class="hover" viewBox="0 0 12 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0.399832 19.7075C0.841643 20.0975 1.55618 20.0975 1.99689 19.7075L11.3382 11.4439C11.5473 11.2618 11.7138 11.0425 11.8276 10.7996C11.9413 10.5566 12 10.2949 12 10.0305C12 9.76609 11.9413 9.50443 11.8276 9.26145C11.7138 9.01846 11.5473 8.79923 11.3382 8.61707L1.92926 0.292494C1.71572 0.106451 1.43294 0.00188239 1.13834 2.51676e-05C0.843741 -0.00183205 0.559416 0.0991613 0.343106 0.282495C0.23595 0.37303 0.150211 0.482766 0.0911985 0.604907C0.0321861 0.727049 0.00115664 0.858994 3.17233e-05 0.992574C-0.00109319 1.12615 0.0277104 1.25852 0.0846587 1.38148C0.141607 1.50445 0.225488 1.61538 0.331106 1.70742L8.94259 9.32404C9.04722 9.41512 9.13055 9.52477 9.18748 9.64631C9.24442 9.76785 9.27378 9.89873 9.27378 10.031C9.27378 10.1633 9.24442 10.2942 9.18748 10.4157C9.13055 10.5372 9.04722 10.6469 8.94259 10.738L0.399832 18.2946C0.295227 18.3856 0.211925 18.4951 0.155 18.6166C0.0980743 18.7381 0.0687176 18.8689 0.0687176 19.0011C0.0687176 19.1332 0.0980743 19.264 0.155 19.3855C0.211925 19.507 0.295227 19.6165 0.399832 19.7075Z"/>
+                        </svg>
+                    </div>
+                </div>
+            </section>
+            <section class="warranty section grid">
+                <h2 class="section__title color--black">Даём официальную гарантию</h2>
+                <div class="warranty__blocks grid">
+                    <div class="warranty__block bg--main-transparent grid">
+                        <div class="warranty__top flex">
+                            <svg viewBox="0 0 56 55" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M25.3714 40.4581V40.6016C25.3714 41.0823 25.4907 41.4886 25.7295 41.8201C25.9713 42.1515 26.3279 42.3172 26.7996 42.3172C27.2683 42.3172 27.6219 42.1515 27.8608 41.8201C28.1025 41.4886 28.2233 41.0823 28.2233 40.6016V40.4581C28.2233 39.9774 28.1025 39.5713 27.8608 39.2396C27.6219 38.9082 27.2683 38.7425 26.7996 38.7425C26.3279 38.7425 25.9713 38.9082 25.7295 39.2396C25.4907 39.5713 25.3714 39.9774 25.3714 40.4581Z"/>
+                                <path d="M33.2772 42.2098V38.8499H31.429L31.3715 40.0953C31.3391 40.8299 31.3008 41.3347 31.2566 41.6096C31.2335 41.7611 31.2042 41.8965 31.1682 42.0155C31.1586 42.0473 31.1486 42.0779 31.1381 42.1074C31.1253 42.1432 31.1119 42.1775 31.0978 42.2098H33.2772Z"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M33.5909 2.32061C30.3459 -0.773536 25.2429 -0.773536 21.9979 2.32061C20.302 3.93776 18.0074 4.77287 15.6686 4.62419C11.194 4.3397 7.2848 7.61986 6.78789 12.0759C6.5283 14.4051 5.3073 16.5198 3.42018 17.9092C-0.190527 20.5676 -1.07661 25.5931 1.40709 29.326C2.70527 31.277 3.12926 33.6819 2.57667 35.9593C1.51953 40.3164 4.07102 44.7358 8.37317 45.9989C10.6217 46.6591 12.4923 48.2286 13.5329 50.3285C15.5238 54.346 20.3192 56.0913 24.4266 54.2936C26.5735 53.3539 29.0153 53.3539 31.1622 54.2936C35.2696 56.0913 40.065 54.346 42.0559 50.3285C43.0966 48.2286 44.9671 46.6591 47.2157 45.9989C51.5178 44.7358 54.0693 40.3164 53.0122 35.9593C52.4596 33.6819 52.8836 31.277 54.1818 29.326C56.6655 25.5931 55.7794 20.5676 52.1687 17.9092C50.2815 16.5198 49.0605 14.4051 48.801 12.0759C48.304 7.61986 44.3949 4.3397 39.9202 4.62419C37.5814 4.77287 35.2869 3.93776 33.5909 2.32061ZM26.4723 17.0698V32.659H30.7039V12.8903H28.2896L21.7633 15.3227V18.8303L26.4723 17.0698ZM23.8017 38.0794H20.6403V42.9803H21.6262V38.8499H23.8017V38.0794ZM24.3633 40.6016V40.4581C24.3633 39.7206 24.5843 39.1174 25.0265 38.6484C25.4687 38.1797 26.0582 37.9452 26.7951 37.9452C27.535 37.9452 28.1261 38.1797 28.5682 38.6484C29.0133 39.1174 29.2358 39.7206 29.2358 40.4581V40.6016C29.2358 41.3421 29.0133 41.9469 28.5682 42.4159C28.1261 42.8818 27.5365 43.1147 26.7996 43.1147C26.0597 43.1147 25.4687 42.8818 25.0265 42.4159C24.5843 41.9469 24.3633 41.3421 24.3633 40.6016ZM34.0289 42.9803V44.1898H34.9486V42.2098H34.2633V38.0794H30.5889L30.5093 40.0147C30.4769 40.7972 30.4341 41.3242 30.3811 41.5961C30.3337 41.8388 30.2569 42.0434 30.1508 42.2098H29.6604V44.1898H30.5756V42.9803H34.0289Z"/>
+                            </svg>
+                            <h2 class="warranty__title color--black">Гарантия на ремонт и запчасти</h2>
+                        </div>
+                        <p class="warranty__descr color--light-black medium">
+                            Мы работаем только с оригинальными запчастями и осуществляем ремонт с гарантией на запчасти и работу до 1 года
+                        </p>
+                    </div>
+                    <div class="warranty__block bg--main-transparent grid">
+                        <div class="warranty__top flex">
+                            <svg viewBox="0 0 56 55" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M22.7802 40.6216V40.479C22.7802 40.0009 22.9019 39.597 23.1453 39.2673C23.3917 38.9376 23.7552 38.7728 24.236 38.7728C24.7138 38.7728 25.0744 38.9376 25.3177 39.2673C25.5641 39.597 25.6873 40.0009 25.6873 40.479V40.6216C25.6873 41.0997 25.5641 41.5036 25.3177 41.8333C25.0744 42.1629 24.7138 42.3278 24.236 42.3278C23.7552 42.3278 23.3917 42.1629 23.1453 41.8333C22.9019 41.5036 22.7802 41.0997 22.7802 40.6216Z"/>
+                                <path d="M30.8391 38.8797V42.2208H28.6175C28.688 42.0628 28.7419 41.8638 28.7793 41.6239C28.8244 41.3507 28.8634 40.8488 28.8965 40.1182L28.9551 38.8797H30.8391Z"/>
+                                <path d="M34.2961 42.1139C34.1339 41.9684 34.0527 41.7679 34.0527 41.5125C34.0527 41.2482 34.1669 41.0388 34.3953 40.8844C34.6266 40.727 34.9632 40.6483 35.4049 40.6483H36.4506V41.2987C36.4506 41.5452 36.3063 41.7783 36.0179 41.9981C35.7324 42.2179 35.4139 42.3278 35.0623 42.3278C34.7168 42.3278 34.4614 42.2565 34.2961 42.1139Z"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M33.5909 2.32062C30.3459 -0.773541 25.2429 -0.773541 21.998 2.32062C20.3019 3.93786 18.0074 4.77301 15.6686 4.62432C11.194 4.33985 7.2848 7.62003 6.78793 12.0761C6.52824 14.4052 5.30733 16.5198 3.42015 17.9093C-0.190484 20.5676 -1.07662 25.5931 1.40706 29.326C2.70522 31.2771 3.12924 33.6819 2.57668 35.9593C1.51952 40.3165 4.07105 44.7359 8.37313 45.999C10.6217 46.6592 12.4923 48.2288 13.5329 50.3286C15.5238 54.346 20.3191 56.0913 24.4266 54.2936C26.5735 53.3539 29.0153 53.3539 31.1622 54.2936C35.2697 56.0913 40.065 54.346 42.056 50.3286C43.0966 48.2288 44.9671 46.6592 47.2157 45.999C51.5178 44.7359 54.0693 40.3165 53.0122 35.9593C52.4596 33.6819 52.8836 31.2771 54.1818 29.326C56.6655 25.5931 55.7793 20.5676 52.1687 17.9093C50.2815 16.5198 49.0606 14.4052 48.8009 12.0761C48.304 7.62003 44.3949 4.33985 39.9202 4.62432C37.5815 4.77301 35.2869 3.93786 33.5909 2.32062ZM20.5221 27.3239V26.8696H24.7814V27.2571C24.7814 28.1303 25.0158 28.8029 25.4845 29.2752C25.9623 29.7474 26.6384 29.9835 27.5128 29.9835C28.3872 29.9835 29.0587 29.7474 29.5275 29.2752C30.0052 28.794 30.2441 28.0412 30.2441 27.0166C30.2441 26.0187 29.9692 25.2792 29.4193 24.7981C28.8784 24.317 28.0942 24.0764 27.0665 24.0764H25.2276V21.1897H26.9584C27.8328 21.1897 28.5043 20.9625 28.9731 20.5081C29.4509 20.0448 29.6897 19.3677 29.6897 18.4767C29.6897 17.6481 29.4959 17.0289 29.1083 16.619C28.7207 16.2092 28.1573 16.0043 27.4181 16.0043C26.6519 16.0043 26.075 16.2181 25.6873 16.6458C25.2997 17.0645 25.1059 17.6793 25.1059 18.4901V18.7841H20.8872V18.4633C20.8872 16.8596 21.4776 15.5321 22.6585 14.4807C23.8394 13.4205 25.462 12.8904 27.5263 12.8904C29.6537 12.8904 31.2628 13.3804 32.3535 14.3604C33.4533 15.3316 34.0031 16.5255 34.0031 17.9421C34.0031 19.0113 33.7552 19.9379 33.2594 20.7219C32.7727 21.506 32.0245 22.094 31.0149 22.486V22.5395C32.0876 22.789 32.9575 23.3191 33.6245 24.1299C34.2916 24.9406 34.6251 25.9652 34.6251 27.2037C34.6251 29.0034 33.9896 30.4334 32.7186 31.4937C31.4566 32.5539 29.7033 33.084 27.4587 33.084C25.2231 33.084 23.5058 32.5583 22.3069 31.507C21.117 30.4468 20.5221 29.0524 20.5221 27.3239ZM17.9575 38.1135H21.1801V38.8797H18.9626V42.9871H17.9575V38.1135ZM21.7525 40.479V40.6216C21.7525 41.3581 21.9779 41.9595 22.4286 42.4258C22.8793 42.8891 23.4818 43.1207 24.236 43.1207C24.9872 43.1207 25.5882 42.8891 26.0389 42.4258C26.4926 41.9595 26.7195 41.3581 26.7195 40.6216V40.479C26.7195 39.7454 26.4926 39.1455 26.0389 38.6793C25.5882 38.213 24.9857 37.9799 24.2315 37.9799C23.4803 37.9799 22.8793 38.213 22.4286 38.6793C21.9779 39.1455 21.7525 39.7454 21.7525 40.479ZM31.6053 44.1899V42.9871H28.0852V44.1899H27.1522V42.2208H27.6521C27.7603 42.0553 27.8386 41.8519 27.8869 41.6105C27.9409 41.3403 27.9845 40.8161 28.0176 40.038L28.0987 38.1135H31.8442V42.2208H32.5428V44.1899H31.6053ZM33.6921 40.3944C33.2655 40.6706 33.0521 41.0581 33.0521 41.5571C33.0521 42.0471 33.2249 42.4228 33.5704 42.6841C33.919 42.9455 34.3382 43.0762 34.828 43.0762C35.2546 43.0762 35.6047 43.0004 35.8781 42.849C36.1546 42.6975 36.3529 42.5223 36.4731 42.3233C36.4821 42.4451 36.5031 42.5668 36.5362 42.6886C36.5723 42.8104 36.6128 42.9098 36.6579 42.9871H37.6314V42.9158C37.5774 42.7851 37.5338 42.6351 37.5007 42.4659C37.4707 42.2936 37.4557 42.111 37.4557 41.9179V39.5925C37.4557 39.0579 37.2784 38.6555 36.9238 38.3852C36.5692 38.115 36.0719 37.9799 35.4319 37.9799C34.7889 37.9799 34.2781 38.1269 33.8995 38.4209C33.5239 38.7149 33.3361 39.0594 33.3361 39.4544V39.4767H34.3412V39.4544C34.3412 39.2643 34.4223 39.0965 34.5846 38.951C34.7498 38.8055 35.0233 38.7327 35.4049 38.7327C35.7865 38.7327 36.0554 38.8129 36.2117 38.9733C36.3709 39.1307 36.4506 39.3371 36.4506 39.5925V39.9756H35.3147C34.6597 39.9756 34.1188 40.1152 33.6921 40.3944Z"/>
+                            </svg>
+                            <h2 class="warranty__title color--black">Продление гарантийного срока</h2>
+                        </div>
+                        <p class="warranty__descr color--light-black medium">
+                            При желании мы готовы Вам дать расширенную гарантию на работы до 3-ёх лет
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section class="brands section grid">
+                <h2 class="section__title color--black">Ремонтируем все марки стиральных машин</h2>
+                <div class="brands__blocks grid">
+                    <div class="brands__prev bg--light-grey hover">
+                        <svg class="hover" viewBox="0 0 12 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M11.6002 19.7075C11.1584 20.0975 10.4438 20.0975 10.0031 19.7075L0.661819 11.4439C0.452717 11.2618 0.286218 11.0425 0.172444 10.7996C0.058671 10.5566 0 10.2949 0 10.0305C0 9.76609 0.058671 9.50443 0.172444 9.26145C0.286218 9.01846 0.452717 8.79923 0.661819 8.61707L10.0707 0.292494C10.2843 0.106451 10.5671 0.00188239 10.8617 2.51676e-05C11.1563 -0.00183205 11.4406 0.0991613 11.6569 0.282495C11.7641 0.37303 11.8498 0.482766 11.9088 0.604907C11.9678 0.727049 11.9988 0.858994 12 0.992574C12.0011 1.12615 11.9723 1.25852 11.9153 1.38148C11.8584 1.50445 11.7745 1.61538 11.6689 1.70742L3.05741 9.32404C2.95278 9.41512 2.86945 9.52477 2.81252 9.64631C2.75558 9.76785 2.72622 9.89873 2.72622 10.031C2.72622 10.1633 2.75558 10.2942 2.81252 10.4157C2.86945 10.5372 2.95278 10.6469 3.05741 10.738L11.6002 18.2946C11.7048 18.3856 11.7881 18.4951 11.845 18.6166C11.9019 18.7381 11.9313 18.8689 11.9313 19.0011C11.9313 19.1332 11.9019 19.264 11.845 19.3855C11.7881 19.507 11.7048 19.6165 11.6002 19.7075Z"/>
+                        </svg>
+                    </div>
+                    <div class="brands__swiper swiper">
+                        <div class="brands__swiper-wrapper swiper-wrapper">
+                            <div class="brands__slide swiper-slide bg--light-grey grid">
+                                <div class="brands__logo" style="background-image: url(img/brands/aeg.png);"></div>
+                            </div>
+                            <div class="brands__slide swiper-slide bg--light-grey grid">
+                                <div class="brands__logo" style="background-image: url(img/brands/akai.png);"></div>
+                            </div>
+                            <div class="brands__slide swiper-slide bg--light-grey grid">
+                                <div class="brands__logo" style="background-image: url(img/brands/amica.png);"></div>
+                            </div>
+                            <div class="brands__slide swiper-slide bg--light-grey grid">
+                                <div class="brands__logo" style="background-image: url(img/brands/ardo.png);"></div>
+                            </div>
+                            <div class="brands__slide swiper-slide bg--light-grey grid">
+                                <div class="brands__logo" style="background-image: url(img/brands/artel.png);"></div>
+                            </div>
+                            <div class="brands__slide swiper-slide bg--light-grey grid">
+                                <div class="brands__logo" style="background-image: url(img/brands/asko.png);"></div>
+                            </div>
+                            <div class="brands__slide swiper-slide bg--light-grey grid">
+                                <div class="brands__logo" style="background-image: url(img/brands/atlant.png);"></div>
+                            </div>
+                            <div class="brands__slide swiper-slide bg--light-grey grid">
+                                <div class="brands__logo" style="background-image: url(img/brands/balay.png);"></div>
+                            </div>
+                            <div class="brands__slide swiper-slide bg--light-grey grid">
+                                <div class="brands__logo" style="background-image: url(img/brands/bauknecht.png);"></div>
+                            </div>
+                            <div class="brands__slide swiper-slide bg--light-grey grid">
+                                <div class="brands__logo" style="background-image: url(img/brands/beko.png);"></div>
+                            </div>
+                            <div class="brands__slide swiper-slide bg--light-grey grid">
+                                <div class="brands__logo" style="background-image: url(img/brands/berson.png);"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="brands__next bg--light-grey hover">
+                        <svg class="hover" viewBox="0 0 12 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0.399832 19.7075C0.841643 20.0975 1.55618 20.0975 1.99689 19.7075L11.3382 11.4439C11.5473 11.2618 11.7138 11.0425 11.8276 10.7996C11.9413 10.5566 12 10.2949 12 10.0305C12 9.76609 11.9413 9.50443 11.8276 9.26145C11.7138 9.01846 11.5473 8.79923 11.3382 8.61707L1.92926 0.292494C1.71572 0.106451 1.43294 0.00188239 1.13834 2.51676e-05C0.843741 -0.00183205 0.559416 0.0991613 0.343106 0.282495C0.23595 0.37303 0.150211 0.482766 0.0911985 0.604907C0.0321861 0.727049 0.00115664 0.858994 3.17233e-05 0.992574C-0.00109319 1.12615 0.0277104 1.25852 0.0846587 1.38148C0.141607 1.50445 0.225488 1.61538 0.331106 1.70742L8.94259 9.32404C9.04722 9.41512 9.13055 9.52477 9.18748 9.64631C9.24442 9.76785 9.27378 9.89873 9.27378 10.031C9.27378 10.1633 9.24442 10.2942 9.18748 10.4157C9.13055 10.5372 9.04722 10.6469 8.94259 10.738L0.399832 18.2946C0.295227 18.3856 0.211925 18.4951 0.155 18.6166C0.0980743 18.7381 0.0687176 18.8689 0.0687176 19.0011C0.0687176 19.1332 0.0980743 19.264 0.155 19.3855C0.211925 19.507 0.295227 19.6165 0.399832 19.7075Z"/>
+                        </svg>
+                    </div>
+                </div>
+            </section>
+            <section class="service section grid">
+                <div class="service__blocks bg--white shadow flex">
+                    <div class="service__left-area grid">
+                        <div class="service__info grid">
+                            <h1 class="service__title color--black">Сломалась стиральная машина?<br>Мы отремонируем</h1>
+                            <p class="service__descr color--black semi-bold">
+                                Вызовите мастера заполнив небольшую форму и уже сегодня Вам починят стиральную машину.
+                            </p>
+                        </div>
+                        <form action="" class="form bg--light-grey grid">
+                            <div class="form__top grid">
+                                <h3 class="form__title color--black">Вызов мастера</h3>
+                                <p class="form__descr color--light-black medium">
+                                    Быстрая форма обратной связи для консультации со специалистом сервисного центра.
+                                </p>
+                            </div>
+                            <div class="form__bottom grid">
+                                <input type="text" name="name" class="form__input input bg--grey color--black semi-bold" placeholder="Ваше имя" required>
+                                <input type="tel" name="telephone" class="form__input input bg--grey color--black semi-bold" placeholder="Ваш номер телефона" required>
+                                <button type="submit" class="form__save button bg--main color--white semi-bold hover">Вызвать мастера</button>
+                            </div>
+                        </form>
+                    </div>
+                    <img src="img/service_image.png" alt="" class="service__image">
+                </div>
+            </section>
+        </main>
+        <footer class="footer bg--black">
+            <div class="footer__wrapper flex">
+                <div class="footer__info grid">
+                    <img src="img/logo-footer.png" alt="" class="footer__logo">
+                    <p class="footer__descr color--white medium">
+                        © 2005-2023 ServiceRSM - Профессиональный ремонт любых стиральных машинок автомат с горизонтальной и вертикальной загрузкой
+                    </p>
+                </div>
+                <div class="footer__right-area flex">
+                    <div class="footer__nav-area grid">
+                        <div class="footer__title color--dark-grey semi-bold">Навигация</div>
+                        <nav class="footer__nav grid">
+                            <a href="#" class="footer__nav-elem color--white semi-bold hover">Цены</a>
+                            <a href="#" class="footer__nav-elem color--white semi-bold hover">О компании</a>
+                            <a href="#" class="footer__nav-elem color--white semi-bold hover">Поломки</a>
+                            <a href="#" class="footer__nav-elem color--white semi-bold hover">Отзывы</a>
+                            <a href="#" class="footer__nav-elem color--white semi-bold hover">Гарантия</a>
+                            <a href="#" class="footer__nav-elem color--white semi-bold hover">Бренды</a>
+                        </nav>
+                    </div>
+                    <div class="footer__nav-area grid">
+                        <div class="footer__title color--dark-grey semi-bold">Контакты</div>
+                        <nav class="footer__nav grid">
+                            <a href="mailto:zakaz@servicersm.ru" class="footer__nav-elem color--white semi-bold hover">zakaz@servicersm.ru</a>
+                            <a href="#" class="footer__nav-elem color--white semi-bold hover">г. Москва, Варшавское шоссе, 145к8</a>
+                            <div class="footer__nav-elem color--white semi-bold flex">
+                                <button class="footer__number-copy bg--light-black flex hover">
+                                    <svg class="hover" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M3.63636 5C3.63636 4.24688 4.24688 3.63636 5 3.63636H8.63636C9.38948 3.63636 10 4.24688 10 5V8.63636C10 9.38948 9.38948 10 8.63636 10H5C4.24688 10 3.63636 9.38948 3.63636 8.63636V5Z"/>
+                                        <path d="M1.36364 0C0.610518 0 0 0.610518 0 1.36364V5C0 5.75312 0.610518 6.36364 1.36364 6.36364H2.72727V4.09091C2.72727 3.33779 3.33779 2.72727 4.09091 2.72727H6.36364V1.36364C6.36364 0.610518 5.75312 0 5 0H1.36364Z"/>
+                                    </svg>
+                                </button>
+                                <span><span class="footer__number">+7 (999) 333-15-74</span> (Без выходных с 9:00 до 21:00.)</span>
+                            </div>
+                            <button class="footer__nav-button button bg--main-transparent color--main semi-bold hover" easy-add="#modal" easy-class="show">Заказать звонок</button>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="js/easy-toggler.iife.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/style.js"></script>
+</body>
+</html>
