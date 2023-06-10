@@ -1,5 +1,5 @@
 const reviews = new Swiper('.reviews__swiper', {
-    spaceBetween: 20,
+    spaceBetween: 60,
     slidesPerView: 3,
 
     navigation: {
@@ -28,7 +28,7 @@ const reviews = new Swiper('.reviews__swiper', {
 });
 
 const brands = new Swiper('.brands__swiper', {
-    spaceBetween: 20,
+    spaceBetween: 60,
     slidesPerView: 5,
     slidesPerGroup: 3,
 
@@ -65,6 +65,50 @@ const brands = new Swiper('.brands__swiper', {
         },
     },
 });
+
+function getTimeRemaining(endtime) {
+    var t = Date.parse(endtime) - Date.parse(new Date());
+    var seconds = Math.floor((t / 1000) % 60);
+    var minutes = Math.floor((t / 1000 / 60) % 60);
+    var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+    var days = Math.floor(t / (1000 * 60 * 60 * 24));
+    return {
+        total: t,
+        days: days,
+        hours: hours,
+        minutes: minutes,
+        seconds: seconds
+    };
+}
+   
+function initializeClock(id, endtime) {
+    var clock = document.getElementById(id);
+    var hoursSpan = clock.querySelector(".hours");
+    var minutesSpan = clock.querySelector(".minutes");
+    var secondsSpan = clock.querySelector(".seconds");
+
+    function updateClock() {
+        var t = getTimeRemaining(endtime);
+
+        if (t.total <= 0) {
+            clearInterval(timeinterval);
+            localStorage.deadline = new Date(Date.parse(new Date()) + 10 * 60 * 60 * 1000);
+            initializeClock('countdown', localStorage.deadline);
+        }
+
+        hoursSpan.innerHTML = ("0" + t.hours).slice(-2);
+        minutesSpan.innerHTML = ("0" + t.minutes).slice(-2);
+        secondsSpan.innerHTML = ("0" + t.seconds).slice(-2);
+    }
+
+    updateClock();
+    var timeinterval = setInterval(updateClock, 1000);
+}
+
+initializeClock("countdown", localStorage.deadline);
+
+
+
 
 function copyTel(classBtn, classNumber) {
     var copyTelBtn = document.querySelector(classBtn);

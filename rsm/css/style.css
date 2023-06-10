@@ -1046,7 +1046,7 @@ h3 {
 /* Stages start */
 
 .stages__blocks {
-    gap: 20px;
+    gap: 60px;
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
 }
 
@@ -1160,7 +1160,7 @@ h3 {
 /* Breakdowns start */
 
 .breakdowns__blocks {
-    gap: 20px;
+    gap: 60px;
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
 }
 
@@ -1244,11 +1244,12 @@ h3 {
 }
 
 .reviews__slide {
-    display: grid;
-
+    display: grid !important;
+    
     padding: 24px;
     box-sizing: border-box;
     gap: 16px;
+    align-content: start;
 
     border-radius: var(--br-1);
 }
@@ -1326,7 +1327,7 @@ h3 {
 /* Warranty start */
 
 .warranty__blocks {
-    gap: 20px;
+    gap: 60px;
     grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
 }
 
